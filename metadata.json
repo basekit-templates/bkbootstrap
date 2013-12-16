@@ -1,0 +1,146 @@
+{
+	"name":"Wishful",
+	"thumbnail":"wishful.png",
+	"screenshot":"wishful.png",
+    "tags": {
+        "en": ["minimal", "clean", "Business", "Vintage", "stylish", "agency", "magazine", "creative", "elegant", "professional", "sophisticated", "media", "sans-serif"],
+        "es": ["minimalista", "limpio", "Corporativo", "estilo", "agencia", "revista", "creativo", "elegante", "profesional", "sofisticado", "comunicacion", "sans-serif"],
+        "br": ["minimalista", "limpo", "Corporativo", "estilo", "agência", "revista", "criativo", "elegante", "profissional", "sofisticado", "mídia", "sans-serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#eff2f6",
+            "color3":"#aecdaf",
+            "color4":"#444546",
+            "color5":"#9e9597",
+            "color6":"#8c8c8c",
+            "color7":"#FFFFFF"
+        },
+        "Swatch 2": {
+            "color1":"#f8f5ec",
+            "color2":"#2d2727",
+            "color3":"#8fcb85",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#eff2f6",
+            "color3":"#838bd8",
+            "color4":"#444546",
+            "color5":"#9e9597",
+            "color6":"#8c8c8c",
+            "color7":"#FFFFFF"
+        },
+        "Swatch 4": {
+            "color1":"#f3f3f3",
+            "color2":"#2d2727",
+            "color3":"#d883a8",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f3f3f3"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#eff2f6",
+            "color3":"#e5c37f",
+            "color4":"#444546",
+            "color5":"#9e9597",
+            "color6":"#8c8c8c",
+            "color7":"#FFFFFF"
+        }
+    },
+    "fontSwatch": {
+       "title": "Lato",
+        "font1": {
+            "font-family": "Lato",
+            "font-size": "32px",
+            "font-weight": "500",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Lato",
+            "font-size": "28px",
+            "font-weight": "inherit",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Lato",
+            "font-size": "22px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Lato",
+            "font-size": "16px",
+            "font-weight": "300",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "2px"
+        },
+        "font5": {
+            "font-family": "Lato",
+            "font-size": "14px",
+            "font-weight": "500",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Lato",
+            "font-size": "12px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch6",
+            "color-hover": "lighten(@color-swatch6,10%)",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch2"
+        },
+        "font7": {
+            "font-family": "Lato",
+            "font-size": "12px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "2px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,8%)"
+        },
+        "font8": {
+            "font-family": "Lato",
+            "font-size": "36px",
+            "font-weight": "500",
+            "line-height": "42px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Lato",
+            "font-size": "17px",
+            "font-weight": "500",
+            "line-height": "30px",
+            "color": "@color-swatch1",
+            "letter-spacing": "1px"
+        },
+        "font10": {
+            "font-family": "Lato",
+            "font-size": "22px",
+            "font-weight": "300",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}

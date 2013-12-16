@@ -1,0 +1,1659 @@
+body {
+  background-color: @color-swatch1;
+  margin: 0;
+  padding: 0;
+}
+
+.box-sizing {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+a {
+  font-family:@font-swatch2-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  color:@color-swatch3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+h1 {
+  font-family:@font-swatch1-font-family;
+  font-weight: @font-swatch1-font-weight;
+  color:@font-swatch1-color;
+  line-height:@font-swatch1-line-height;
+  letter-spacing: @font-swatch1-letter-spacing;
+  font-size: @font-swatch1-font-size;
+}
+
+h2
+{
+  font-family:@font-swatch2-font-family;
+  font-size: @font-swatch2-font-size;
+  font-weight: @font-swatch2-font-weight;
+  line-height:@font-swatch2-line-height;
+  color: @font-swatch2-color;
+  letter-spacing: @font-swatch2-letter-spacing;
+}
+
+h3
+{
+  font-family:@font-swatch3-font-family;
+  font-size:@font-swatch3-font-size;
+  font-weight: @font-swatch3-font-weight;
+  color: @font-swatch3-color;
+  line-height:@font-swatch3-line-height;
+  letter-spacing: @font-swatch3-letter-spacing;
+}
+
+h4
+{
+  font-family:@font-swatch4-font-family;
+  font-size:@font-swatch4-font-size;
+  font-weight:@font-swatch4-font-weight;
+  line-height:@font-swatch4-line-height;
+  color:@font-swatch4-color;
+  letter-spacing: @font-swatch4-letter-spacing;
+}
+
+p, .p-font
+{
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+ul, ol, li {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+blockquote {
+  background: lighten(@color-swatch5,20%);
+  margin:0;
+  padding: 20px;
+  quotes:"\201C""\201D""\2018""\2019";
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+}
+
+blockquote:before {
+  font-family: georgia;
+  color: @font-swatch5-color;
+  content:open-quote;
+  font-size:4em;
+  line-height:.1em;
+  margin-right:.1em;
+  vertical-align:-.4em;
+}
+
+
+/* ===============================
+   RESPONSIVE QUERIES
+   =============================== */
+
+@tablet: ~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 480px)";
+
+
+/* ===============================
+   CUSTOM CSS
+   =============================== */
+
+.main {
+    padding: 2.5em 0;
+    @media @tablet {
+        padding: 2em 0;
+    }
+}
+
+
+/* ===============================
+   HEADER
+   =============================== */
+
+header {
+    padding: 1.5em 0;
+    margin: 0;
+    background-color: @color-swatch7;
+
+    @media @tablet {
+        padding: 1.2em 0;
+    }
+
+}
+
+/* COMPANY HEADER */
+
+.companyheader {
+    display: block;
+    float: left;
+}
+
+/* COMPANY NAME */
+
+.widget {
+    &.companyname {
+        display: block;
+        float: left;
+
+        a {
+            font-family:@font-swatch10-font-family;
+            font-weight: @font-swatch1-font-weight;
+            color:@font-swatch10-color;
+            line-height:@font-swatch10-line-height;
+            letter-spacing: @font-swatch10-letter-spacing;
+            font-size: @font-swatch10-font-size;
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+/* LOGO */
+
+.widget {
+    &.logo {
+        display: block;
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+    background-color: darken(@color-swatch4,10%);
+    padding: 2em 0;
+    min-height: 150px;
+
+    @media @tablet {
+        padding: 1.6em 0;
+    }
+
+}
+
+
+/* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
+
+.widget {
+    .extendednavigation {
+        float: right;
+        position: relative;
+        max-width: 700px;
+
+        @media @tablet { 
+            float: none;
+        }
+
+        li {
+            ul {
+                display: none;
+            }
+        }
+
+        ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+
+            @media @tablet {
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
+                width: 100%;
+                border-top: 1px solid @color-swatch2;
+                margin: 1em 0 0;
+            }
+
+            /* ALIGN CENTER */
+            &.align-center {
+                li {
+                    text-align: center;
+                    &:hover {
+                        li {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            /* ALIGN LEFT */
+            &.align-left {
+                li {
+                    text-align: left;
+                    &:hover {
+                        li {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            /* ALIGN RIGHT */
+            &.align-right {
+                li {
+                    text-align: right;
+                    &:hover {
+                        li {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            li {
+                float: left;
+                display: block;
+
+                @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px solid @color-swatch2;
+                }
+
+                &:last-child {
+                    @media @tablet {
+                        border-bottom: 0;
+                    }
+                }
+
+                &:hover {
+
+                    ul {
+                        display: block;
+                        position: absolute;
+                        background-color: @color-swatch7;
+                        z-index: 500;
+                        padding: 0;
+                        margin: 1em 0 0;
+
+                        li {
+                            display: block;
+                            width: 100%;
+                            .box-sizing;
+
+                            a {
+                                display: block;
+                                color: @color-swatch5;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0 20px;
+                    font-family: @font-swatch6-font-family;
+                    font-size: @font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch6-color;
+                    line-height: @font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    &:hover {
+                        color: @font-swatch6-color-hover;
+                        text-decoration: none;
+                    }
+                }
+
+                &.folder {
+                    /* Folder dropdown arrow BG style goes Here */  
+                    background-image: image('/images/arrow-down.png');
+                    background-position: right center;
+                    background-repeat: no-repeat; 
+                    margin-right: 20px;            
+                    cursor: pointer;
+
+                    .text {
+                        display: block;
+                        padding: 0 20px;
+                        font-family: @font-swatch6-font-family;
+                        font-size: @font-swatch6-font-size;
+                        font-weight: @font-swatch6-font-weight;
+                        color: @font-swatch6-color;
+                        line-height: @font-swatch6-line-height;
+                        letter-spacing: @font-swatch6-letter-spacing;
+                        &:hover {
+                            color: @font-swatch6-color-hover;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        a {
+            &.pull {
+                display: none;
+
+                @media @tablet {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 10px;
+                    &:after {
+                        content:"";
+                        background: image('/images/nav-icon.png') no-repeat;
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+/* ===============================
+   FEATURE
+   =============================== */
+
+ .widget {
+
+    &.feature {
+        .feature-bgimg {
+            height: 500px;
+
+            .content {
+                height: 500px;
+                text-align: center;
+
+                h2 {
+                    font-family:@font-swatch8-font-family;
+                    font-size:@font-swatch8-font-size;
+                    font-weight: @font-swatch8-font-weight;
+                    line-height:@font-swatch8-line-height;
+                    color: @font-swatch8-color;
+                    letter-spacing: @font-swatch8-letter-spacing;
+                    span {
+                        display: inline-block;
+                        padding: 20px;
+                    }
+                }
+
+                h3 {
+                    font-family:@font-swatch9-font-family;
+                    font-size:@font-swatch9-font-size;
+                    font-weight: @font-swatch9-font-weight;
+                    line-height:@font-swatch9-line-height;
+                    color: @font-swatch9-color;
+                    letter-spacing: @font-swatch9-letter-spacing;
+                    span {
+                        display: inline-block;
+                        padding: 6px 20px;
+                    }
+                }
+
+                button {
+                    margin: 1em 0;
+                    padding: 8px 14px;
+                    border: 0;
+                    background-color: @font-swatch7-background-color;
+                    font-family:@font-swatch7-font-family;
+                    font-size: @font-swatch7-font-size;
+                    font-weight:@font-swatch7-font-weight;
+                    line-height:@font-swatch7-line-height;
+                    color:@font-swatch7-color;
+                    letter-spacing: @font-swatch7-letter-spacing;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: @font-swatch7-background-color-hover;
+                        cursor: pointer;
+                    }
+
+                    &.btn {
+
+                        /* ALIGNMENTS */
+
+                        &.justifyleft {
+                            text-align: left;
+                        }
+                        &.justifycenter {
+                            text-align: center;
+                        }
+                        &.justifyright {
+                            text-align: right;
+                        }
+                        &.justifyfull {
+                            text-align: justify;
+                        }
+
+                        /* FONT STYLES */
+
+                        &.justifyitalic {
+                            font-style: italic;
+                        }
+                        &.justifybold {
+                            font-weight: bold;
+                        }
+                    }
+                    span {
+                        vertical-align: middle;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+        }
+        &:align-left {
+            .content {
+                width: 100%;
+                text-align: left;
+            }
+        }
+        &:align-center {
+            .content {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &:align-right {
+            .content {
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+
+}
+
+
+/* ===============================
+   CLICK TO CALL WIDGET
+   =============================== */
+
+.widget.clicktocall a {
+    font-family: @font-swatch5-font-family;
+    font-weight:@font-swatch5-font-weight;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+    font-size: @font-swatch5-font-size;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    /* ALIGNMENTS */
+    &.justifyleft {
+        text-align: left;
+    }
+    &.justifycenter {
+        text-align: center;
+    }
+    &.justifyright {
+        text-align: right;
+    }
+    &.justifyfull {
+        text-align: justify;
+    }
+
+    /* FONT STYLES */
+
+    &.justifyitalic {
+        font-style: italic;
+    }
+    &.justifybold {
+        font-weight: bold;
+    }
+}
+
+
+/* ===============================
+   BUTTON CSS
+   =============================== */
+
+.widget {
+    &.button {
+        padding: 4px 0;
+
+        button {
+            padding: 8px 14px;
+            margin: 0;
+            border: 0;
+            background-color: @font-swatch7-background-color;
+            font-family:@font-swatch7-font-family;
+            font-size:font-swatch7-font-size;
+            font-weight:@font-swatch7-font-weight;
+            line-height:@font-swatch7-line-height;
+            color:@font-swatch7-color;
+            letter-spacing: @font-swatch7-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+                cursor: pointer;
+            }
+
+            &.btn {
+                /* ALIGNMENTS */
+                &.justifyleft {
+                    text-align: left;
+                }
+                &.justifycenter {
+                    text-align: center;
+                }
+                &.justifyright {
+                    text-align: right;
+                }
+                &.justifyfull {
+                    text-align: justify;
+                }
+
+                /* FONT STYLES */
+                &.justifyitalic {
+                    font-style: italic;
+                }
+                &.justifybold {
+                    font-weight: bold;
+                }
+            }  
+
+            span {
+                vertical-align: middle;
+            }
+
+            i {
+                margin-right: 5px;
+            } 
+        }
+    }
+}
+
+
+/* ===============================
+   CONTENT CSS
+   =============================== */
+
+
+.widget {
+    .content {
+        padding: 0;
+        overflow: hidden;
+        span {
+            &.expand {
+                .p-font;
+                cursor: pointer;
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                    color: darken(@color-swatch5,5%); 
+                }
+                @media @tablet {
+                    display:none!important;
+                }
+            }
+        }
+        .bk-content-text {
+            @media @tablet {
+                overflow: visible!important;
+                height: auto!important;
+            }
+        }
+    }
+}
+
+
+/* ===============================
+   IMAGE WIDGET
+   =============================== */
+
+.widget {
+    &.image {
+        img {
+            display:block;
+            max-width: 100%;
+        }
+    }
+    span {
+        &.image-title {
+            display: block;
+            margin: 5px;
+            font-family: @font-swatch4-font-family;
+            font-weight: @font-swatch4-font-weight;
+            font-size: @font-swatch4-font-size;
+            line-height: @font-swatch4-line-height;
+            text-align: center;
+        }
+        &.image-description {
+            display: block;
+            margin: 5px;
+            font-family: @font-swatch5-font-family;
+            font-weight: @font-swatch5-font-weight;
+            font-size: @font-swatch5-font-size;
+            line-height: @font-swatch5-line-height;
+            text-align: center;
+        }
+    }
+}
+
+
+/* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.widget {
+    .gallery {
+        width: 101.2%;
+        margin-left: -0.5%;
+
+        ul {
+            display:block;
+            margin: 0;
+            padding:0px;
+            list-style: none;
+            *zoom: 1;
+
+            &:before,
+            &:after {
+                content: "";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+
+            li {
+                float: left;
+                position: relative;
+                width: 33.3%;
+                padding-bottom: 33%;
+
+                span {
+                    &.inner {
+                        background-position:center center;
+                        background-repeat:no-repeat;
+                        background-color: @color-swatch1;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        position: absolute;
+                        left: 5px;
+                        right: 5px;
+                        top: 0px;
+                        bottom: 16px;
+                        overflow: hidden;
+                        img {
+                            display: none;
+                        }
+                        .title,
+                        .description {
+                            position: absolute;
+                            bottom: 0px;
+                            left: 0px;
+                            right: 0px;
+                            margin-bottom: -50px;
+                            background:@color-swatch1;
+                            background: rgba(0, 0, 0, 0.5);
+                            padding: 10px;
+                            text-align: center;
+                            -webkit-transition: all 0.3s ease-out;
+                            -moz-transition: all 0.3s ease-out;
+                            -o-transition: all 0.3s ease-out;
+                            transition: all 0.3s ease-out;
+                            font-family:@font-swatch5-font-family;
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color:@color-swatch1;
+                            letter-spacing: @font-swatch5-letter-spacing;
+                        }
+                        .title {
+                            margin-bottom: 0;
+                        }
+                        .description {
+                            display: none;
+                        }
+
+                        a {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                &.one-to-one {
+                    span {
+                        &:inner {
+                            background-size:100% 100%;
+                        }
+                    }
+                }
+                &.portrait {
+                    span {
+                        &:inner {
+                            background-size:100% auto;
+                        }
+                    }
+                }
+                &.landscape {
+                    span {
+                        &:inner {
+                            background-size: auto 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+/* ===============================
+   DIVIDER WIDGET
+   =============================== */
+
+.widget {
+    &.line {
+        padding: 20px 0;
+    }
+}
+
+hr {
+    &.line {
+        background-color: lighten(@color-swatch5,15%);
+        height: 2px;
+        width: 100%;
+        border: none;
+        &:align-left {
+            margin: 20px auto 20px 0px;
+        }
+        &:align-center {
+            margin: 20px auto;
+        }
+        &:align-right {
+            margin: 20px 0px 20px auto;
+        }
+    }
+}
+
+
+/* ===============================
+   REDIRECT WIDGET
+   =============================== */
+
+.widget {
+    &.redirecttodesktop {
+        padding: 8px 0;
+
+        a {
+            padding-right: 30px;
+            padding-top: 2px;
+            background-image: image('/images/desktop.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            text-decoration: none;
+            cursor: pointer;
+            .p-font;
+            &:hover,
+            &:active {
+                background-image: image('/images/desktop.png');
+                background-repeat: no-repeat;
+                background-position: right center;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* ===============================
+   TWITTER WIDGET
+   =============================== */
+
+.widget {
+    &.twitter {
+        padding: 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style: none;
+                padding-bottom: 30px;
+
+                a {
+                    font-family:@font-swatch4-font-family;
+                    font-size:@font-swatch4-font-size;
+                    font-weight:@font-swatch4-font-weight;
+                    line-height:@font-swatch4-line-height;
+                    color:@font-swatch4-color;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                span {
+                    /* Styles for Tweet type link */
+                    a {
+                        .p-font;
+                        text-decoration: underline;
+                    }
+                }
+
+                time {
+                    color: lighten(@font-swatch5-color,10%);
+                }
+            }
+        }
+
+        .twitter-profile-pic {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+
+/* ===============================
+   CONTACT FORM WIDGET
+   =============================== */
+
+.widget {
+    &.contactform {
+
+        form {
+            display: block;
+            padding: 0;
+            margin: 1.6em 0;
+
+            fieldset {
+                border: none;
+                padding: 0;
+                margin: 0;
+
+                label {
+                    width: 100%;
+                    float: left;
+                    font-family:@font-swatch4-font-family;
+                    font-size:font-swatch4-font-size;
+                    font-weight:@font-swatch4-font-weight;
+                    line-height:@font-swatch4-line-height;
+                    color:@font-swatch4-color;
+                    letter-spacing: @font-swatch4-letter-spacing;
+                }
+
+                input {
+                    height: 40px;
+                    width: 100%;
+                    padding: 0;
+                    border: 1px solid lighten(@color-swatch5,10%);
+                    .p-font;
+                    text-indent: 8px;
+                    margin-top: 6px;
+                    margin-bottom: 30px;
+                }
+
+                textarea {
+                    height: 100px;
+                    width: 100%;
+                    border: 1px solid lighten(@color-swatch5,10%);
+                    font-family: @font-swatch5-font-family;
+                    font-size: @font-swatch5-font-size;
+                    color: @font-swatch5-color;
+                    text-indent: 8px;
+                    padding: 14px 0px 0px 0px;
+                    margin-top: 6px;
+                    margin-bottom: 20px;
+                    resize: none;
+                }
+
+                button {
+                    &.btn {
+                        padding: 8px 14px;
+                        margin: 0;
+                        border: 0;
+                        background-color: @font-swatch7-background-color;
+                        font-family:@font-swatch7-font-family;
+                        font-size:font-swatch7-font-size;
+                        font-weight:@font-swatch7-font-weight;
+                        line-height:@font-swatch7-line-height;
+                        color:@font-swatch7-color;
+                        letter-spacing: @font-swatch7-letter-spacing;
+                        text-decoration: none;
+                        &:hover {
+                            background-color: @font-swatch7-background-color-hover;
+                            cursor: pointer;
+                        }
+
+                        /* ALIGNMENTS */
+
+                        &.justifyleft {
+                            text-align: left;
+                        }
+                        &.justifycenter {
+                            text-align: center;
+                        }
+                        &.justifyright {
+                            text-align: right;
+                        }
+                        &.justifyfull {
+                            text-align: justify;
+                        }
+
+                        /* FONT STYLES */
+
+                        &.justifyitalic {
+                            font-style: italic;
+                        }
+                        &.justifybold {
+                            font-weight: bold;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+/* ===============================
+   TWEET THIS WIDGET
+   =============================== */
+
+.widget {
+    &.tweet { 
+        padding: 9px 0;
+        a {
+            padding: 14px 10px 14px 40px;
+            margin: 1em 0;
+            border: none;
+            background-image: image('/images/social/socialicons-twitter.svg');
+            background-repeat: no-repeat;
+            background-position: 10px;
+            background-size: 22px;
+            background-color: @font-swatch7-background-color;
+            font-family:@font-swatch7-font-family;
+            font-size:@font-swatch7-font-size;
+            font-weight:@font-swatch7-font-weight;
+            line-height:@font-swatch7-line-height;
+            color:@font-swatch7-color;
+            letter-spacing: @font-swatch7-letter-spacing;
+            text-decoration: none;
+            &:hover,
+            &:active {
+                background-color: @font-swatch7-background-color-hover;
+                background-image: image('/images/social/socialicons-twitter.svg');
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+
+/* ===============================
+   DROPBOX WIDGET
+   =============================== */
+
+.widget {
+    &.dropbox { 
+        button {
+            padding: 10px 10px 10px 40px;
+            margin: 1em 0;
+            border: none;
+            background-image: image('/images/dropbox.png');
+            background-repeat: no-repeat;
+            background-position: 10px;
+            background-size: 22px;
+            background-color: @font-swatch7-background-color;
+            font-family:@font-swatch7-font-family;
+            font-size:@font-swatch7-font-size;
+            font-weight:@font-swatch7-font-weight;
+            line-height:@font-swatch7-line-height;
+            color:@font-swatch7-color;
+            letter-spacing: @font-swatch7-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+                cursor: pointer;
+            }
+        }
+
+        .file-name {
+            .p-font;
+            margin-left: 5px;
+        }
+
+    }
+}
+
+
+/* ===============================
+   PAYPAL WIDGET
+   =============================== */
+
+.widget {
+    &.paypalbuynow {
+        .widget {
+            &.button {
+                &.paypal {
+                    padding: 10px 10px 10px 40px;
+                    margin: 1em 0;
+                    border: none;
+                    background-image: image('/images/paypal.png');
+                    background-repeat: no-repeat;
+                    background-position: 10px;
+                    background-size: 20px;
+                    background-color: @font-swatch7-background-color;
+                    font-family:@font-swatch7-font-family;
+                    font-size: @font-swatch7-font-size;
+                    font-weight:@font-swatch7-font-weight;
+                    line-height:@font-swatch7-line-height;
+                    color:@font-swatch7-color;
+                    letter-spacing: @font-swatch7-letter-spacing;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: @font-swatch7-background-color-hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/* ==================================
+   SOCIAL BAR WIDGET / SOCIAL PROFILE
+   =============================== */
+
+.widget {
+    &.socialicons {
+        margin: 1em 0;
+        .p-font;
+
+        a {
+            text-decoration: none;
+            text-indent: -9999px;
+            white-space: nowrap;
+        }
+
+        span {
+            a {
+                display: inline-block;
+                margin-right: 6px;
+                margin-bottom: 6px;
+                background-size: 18px;
+                width: 32px;
+                height: 32px;
+                background-color: @color-swatch4;
+                background-repeat: no-repeat;
+                background-position: center;
+                &:hover {
+                    background-color: lighten(@color-swatch4,10%);
+                }
+            }
+            .svg {
+                &.bk-socialicons-twitter {
+                    a {
+                        background-image: image('/images/social/socialicons-twitter.svg');
+                        background-image: image('/images/social/socialicons-twitter.png');
+                    }
+                }
+            }
+            &.bk-socialicons-linkedin {
+                a {
+                    background-image: image('/images/social/socialicons-linkedin.svg');
+                }
+            }
+            &.bk-socialicons-facebook {
+                a {
+                    background-image: image('/images/social/socialicons-facebook.svg');
+                }
+            }
+            &.bk-socialicons-googleplus {
+                a {
+                    background-image: image('/images/social/socialicons-googleplus.svg');
+                }
+            }
+            &.bk-socialicons-youtube {
+                a {
+                    background-image: image('/images/social/socialicons-youtube.svg');
+                }
+            }
+            &.bk-socialicons-rss {
+                a {
+                    background-image: image('/images/social/socialicons-rss.svg');
+                }
+            }
+        }
+
+    }
+}
+
+
+/* ===============================
+   PROFILE WIDGET
+   =============================== */
+
+.widget.profile span, .widget.profile a {
+    display: block;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: lighten(@color-swatch5,10%);
+    line-height:@font-swatch5-line-height;
+}
+
+.widget.profile a:hover {
+    color: @color-swatch1;
+    text-decoration: none;
+}
+
+/* FOOTER PROFILE - TWITTER */
+
+.widget.profile ul.twitter {
+  padding: 0px;
+  margin: 0px;
+}
+
+.widget.profile ul.twitter li {
+  list-style: none;
+}
+
+.widget.profile ul.twitter img, .widget.profile ul.twitter time,
+.widget.profile ul.twitter span {
+  display: none;
+}
+
+/* FOOTER PROFILE - SIGNUP FORM */
+
+.widget.profile form {
+  padding: 0px;
+}
+
+.widget.profile form fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.profile form label {
+  display: none;
+  width: 100%;
+  float: left;
+  margin-bottom: 6px;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,15%);
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.profile form input {
+  height: 42px;
+  background-color: darken(@color-swatch4,3%);
+  border: 1px solid darken(@color-swatch4,13%);
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,25%);
+  letter-spacing: @font-swatch5-letter-spacing;
+  text-indent: 16px;
+  -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+
+.widget.profile form input:focus {
+  outline: none;
+}
+
+.widget.profile form button {
+    padding: 15px 10px;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+        border-radius: 2px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+
+    font-family: @font-swatch2-font-family;
+    font-size:.8em;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @color-swatch3;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3); 
+}
+
+.widget.profile form button:hover {
+    cursor: pointer;
+    background-color: darken(@color-swatch2,5%)
+}
+
+
+
+/* ===============================
+   MAP WIDGET
+   =============================== */
+
+.widget.map  {
+  margin: 0px;
+  padding: 20px;
+  background-color: lighten(@color-swatch5,22%);
+}
+
+.widget.map .map {
+
+}
+
+
+/* ===============================
+   SIGNUP FORM WIDGET
+   =============================== */
+
+.widget.signupform {
+  padding: 0px;
+}
+
+.widget.signupform fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.signupform label {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family:@font-swatch1-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch4;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+.widget.signupform fieldset input {
+    height: 42px;
+    width: 42%;
+    background-color: lighten(@color-swatch5,22%);
+    /*background-color: lighten(@color-swatch5,46%);*/
+    border: 1px solid lighten(@color-swatch5,15%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.widget.signupform fieldset input:focus {
+  outline: none;
+}
+
+.widget.signupform button {
+    padding: 15px 10px;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+
+    font-family: @font-swatch2-font-family;
+    font-size:.8em;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @color-swatch3;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
+.widget.signupform button:hover {
+  cursor: pointer;
+  background-color: darken(@color-swatch2,5%);
+}
+
+.widget.signupform button:active {
+  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
+}
+
+
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+.widget.responsiveslideshow .slideshow-image-list {
+    height: 300px;
+}
+
+.widget.responsiveslideshow .slideshow-widget {
+    background-color: lighten(@color-swatch5,17%);
+}
+.widget.responsiveslideshow span.inner img {
+    width:auto;
+    height:100%;
+}
+
+.widget.responsiveslideshow .image-wrapper {
+    padding:15px;
+}
+
+.widget.responsiveslideshow .crop .image-wrapper {
+    padding:0;
+}
+
+.widget.responsiveslideshow .content-wrapper {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:auto;
+    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
+}
+
+.widget.responsiveslideshow .slideshow-image-list {
+    height:450px;
+  }
+
+.widget.responsiveslideshow .title {
+    display: inline-block;
+    padding:5px 20px 0 20px;
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:bkscale(@font-swatch5-line-height, 0.55);
+    color: @color-swatch1;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.responsiveslideshow .description {
+    display: block;
+    padding: 6px 20px;
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:bkscale(@font-swatch5-line-height, 0.55);
+    color: @color-swatch1;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+    font-size: 0;
+    z-index: 11;
+    text-indent: -99999px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev {
+  left: 10px;
+  background: image('/images/slideshow-arrow-left.png') no-repeat center left;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+  right: 10px;
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls {
+  margin-top: 10px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play
+{
+    background: image('/images/slideshow-play.png') center no-repeat;
+    background-size: 100%;
+    border-radius:10px;
+    font-size:0;
+    text-indent: -99999px;
+}
+
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
+{
+    background: image('/images/slideshow-pause.png') center no-repeat;
+    background-size: 100%;  
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot
+{
+    border:none;
+    background:transparent image('/images/slideshow-dot-not-selected.png') center no-repeat;
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot.selected
+{
+    background:transparent image('/images/slideshow-dot-selected.png') center no-repeat;
+}
+
+/* ===============================
+   IPAD WIDTH
+   =============================== */
+
+@media only screen and (max-width: 768px) {
+
+
+  /* FEATURE */
+
+   .widget.feature .feature-bgimg {
+    height: 300px;
+   }
+
+  .widget.feature .content {
+    height: 300px;
+  }
+
+  .widget.feature h2 {
+    font-size:bkscale(@font-swatch8-font-size, 0.7); /* 25px */
+    line-height:bkscale(@font-swatch8-line-height, 0.8); /* 40px */
+  }
+
+  .widget.feature h2 span {
+    padding: 10px;
+  }
+
+  .widget.feature h3 {
+    font-size:bkscale(@font-swatch9-font-size, 0.7); /* 40px */
+    line-height:bkscale(@font-swatch9-line-height, 0.8); /* 40px */
+  }
+
+  .widget.feature .feature-btn button {
+    font-size: .9em;
+  }
+
+  .widget.responsiveslideshow .slideshow-image-list, 
+  .widget.responsiveslideshow .slideshow-widget {
+    height:350px;
+  }
+
+  .widget.signupform fieldset input {
+    width: 52%;
+  }
+
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .widget.gallery li {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .widget.gallery li {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+
+/* ===============================
+   IPHONE WIDTH
+   =============================== */
+
+@media only screen and (max-width: 480px) {
+
+  .main {
+    padding:5px 0px;
+  }
+
+  /* COMPANY HEADER */
+
+  .widget.companyheader .company-name h1 {
+    font-size:bkscale(@font-swatch1-font-size, 0.6)
+  }
+
+  /* FEATURE */
+
+  .widget.feature .feature-bgimg {
+    height: 220px; /* should be in media query*/
+   }
+
+  .widget.feature .content {
+    height: 220px;
+  }
+
+  .widget.feature h2 {
+    font-size:bkscale(@font-swatch8-font-size, 0.6); /* 20px */
+    line-height:bkscale(@font-swatch8-line-height, 0.5); /* 30px */
+  }
+
+  .widget.feature h3 {
+    font-size:bkscale(@font-swatch9-font-size, 0.7); /* 20px */
+    line-height:bkscale(@font-swatch9-line-height, 0.8); /* 30px */
+  }
+
+  .widget.feature button {
+    margin: 0;
+  }
+
+  /* SLIDESHOW */
+  .widget.responsiveslideshow .title {
+    padding-bottom:7px;
+  }
+
+  .widget.responsiveslideshow .description {
+    display:none;
+  }
+
+
+  /* CLICK TO CALL */
+
+  .widget.clicktocall {
+    padding: 10px 0px;
+  }
+
+  .widget.clicktocall a {
+    background-image: image('/images/ic-call.png');
+    background-color: @color-swatch3;
+    background-position: 10px;
+    background-repeat:no-repeat;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    padding: 10px 10px 10px 38px;
+    border: 0;
+    font-family: @font-swatch2-font-family;
+    font-size:1em;
+    font-weight:@font-swatch7-font-weight;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+  }
+  
+  .widget.clicktocall a:hover {
+    background-image: image('/images/ic-call.png');
+    background-color: @color-swatch2;
+    background-position: 10px;
+    color: @color-swatch1;
+    padding: 10px 10px 10px 38px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+   .widget.responsiveslideshow .slideshow-image-list, 
+  .widget.responsiveslideshow .slideshow-widget {
+    height:300px;
+  }
+
+  /* GALLERY */
+
+  .widget.gallery p
+  {
+    padding: 10px;
+  }
+
+  /* Smartphone view: 1 tile */
+  .widget.gallery li {
+      width: 100%;
+      padding-bottom: 100%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 960px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+
+
