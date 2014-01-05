@@ -7,9 +7,8 @@ body {
 .box-sizing {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box; /* Opera/IE 8+ */
+    box-siing: border-box; /* Opera/IE 8+ */
 }
-
 
 .wrapper {
     width: 90%;
@@ -17,15 +16,12 @@ body {
 }
 
 a {
-  font-family:@font-swatch2-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  color:@color-swatch3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+    .p-font;
+    color:@color-swatch3;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 h1, h2, h3, h4, h5, p {
@@ -385,6 +381,34 @@ footer {
 /* ===============================
    FEATURE
    =============================== */
+
+   /* FEATURE */
+
+   .widget.feature .feature-bgimg {
+    height: 300px;
+   }
+
+  .widget.feature .content {
+    height: 300px;
+  }
+
+  .widget.feature h2 {
+    font-size:bkscale(@font-swatch8-font-size, 0.7); /* 25px */
+    line-height:bkscale(@font-swatch8-line-height, 0.8); /* 40px */
+  }
+
+  .widget.feature h2 span {
+    padding: 10px;
+  }
+
+  .widget.feature h3 {
+    font-size:bkscale(@font-swatch9-font-size, 0.7); /* 40px */
+    line-height:bkscale(@font-swatch9-line-height, 0.8); /* 40px */
+  }
+
+  .widget.feature .feature-btn button {
+    font-size: .9em;
+  }
 
  .widget {
 
@@ -1108,7 +1132,7 @@ hr {
 
 
 /* ==================================
-   SOCIAL BAR WIDGET / SOCIAL PROFILE
+   SOCIAL ICONS
    =============================== */
 
 .widget {
@@ -1130,167 +1154,334 @@ hr {
                 background-size: 18px;
                 width: 32px;
                 height: 32px;
-                background-color: @color-swatch4;
+                background-color: @font-swatch7-background-color;
                 background-repeat: no-repeat;
                 background-position: center;
                 &:hover {
-                    background-color: lighten(@color-swatch4,10%);
-                }
-            }
-            .svg {
-                &.bk-socialicons-twitter {
-                    a {
-                        background-image: image('/images/social/socialicons-twitter.svg');
-                        background-image: image('/images/social/socialicons-twitter.png');
-                    }
-                }
-            }
-            &.bk-socialicons-linkedin {
-                a {
-                    background-image: image('/images/social/socialicons-linkedin.svg');
-                }
-            }
-            &.bk-socialicons-facebook {
-                a {
-                    background-image: image('/images/social/socialicons-facebook.svg');
-                }
-            }
-            &.bk-socialicons-googleplus {
-                a {
-                    background-image: image('/images/social/socialicons-googleplus.svg');
-                }
-            }
-            &.bk-socialicons-youtube {
-                a {
-                    background-image: image('/images/social/socialicons-youtube.svg');
-                }
-            }
-            &.bk-socialicons-rss {
-                a {
-                    background-image: image('/images/social/socialicons-rss.svg');
+                    background-color: @font-swatch7-background-color-hover;
                 }
             }
         }
+    }
+}
 
+/* -- SOCIAL ICON BG IMAGES -- */
+
+/* LINKEDIN */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-linkedin {
+                    a {
+                        background-image: image('/images/social/socialicons-linkedin.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons,
+    &.profile {
+        span {
+            &.bk-socialicons-linkedin {
+                a {
+                    background-image: image('/images/social/socialicons-linkedin.png');
+                }
+            }
+        }
+    }
+}
+
+/* TWITTER */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-twitter {
+                    a {
+                        background-image: image('/images/social/socialicons-twitter.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons,
+    &.profile {
+        span {
+            &.bk-socialicons-twitter {
+                a {
+                    background-image: image('/images/social/socialicons-twitter.png');
+                }
+            }
+        }
+    }
+}
+
+/* FACEBOOK */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-facebook {
+                    a {
+                        background-image: image('/images/social/socialicons-facebook.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons {
+        span {
+            &.bk-socialicons-facebook {
+                a {
+                    background-image: image('/images/social/socialicons-facebook.png');
+                }
+            }
+        }
+    }
+}
+
+/* RSS */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-rss {
+                    a {
+                        background-image: image('/images/social/socialicons-rss.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons,
+    &.profile {
+        span {
+            &.bk-socialicons-rss {
+                a {
+                    background-image: image('/images/social/socialicons-rss.png');
+                }
+            }
+        }
+    }
+}
+
+/* GOOGLE+ */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-googleplus {
+                    a {
+                        background-image: image('/images/social/socialicons-googleplus.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons,
+    &.profile {
+        span {
+            &.bk-socialicons-googleplus {
+                a {
+                    background-image: image('/images/social/socialicons-googleplus.png');
+                }
+            }
+        }
+    }
+}
+
+/* YOUTUBE */
+.svg {
+    .widget {
+        &.socialicons,
+        &.profile {
+            span {
+                &.bk-socialicons-youtube {
+                    a {
+                        background-image: image('/images/social/socialicons-youtube.svg');
+                    }
+                }
+            }
+        }
+    }
+}
+.widget {
+    &.socialicons,
+    &.profile {
+        span {
+            &.bk-socialicons-youtube {
+                a {
+                    background-image: image('/images/social/socialicons-youtube.png');
+                }
+            }
+        }
     }
 }
 
 
-/* ===============================
+/* ==================================
    PROFILE WIDGET
    =============================== */
 
-.widget.profile span, .widget.profile a {
-    display: block;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: lighten(@color-swatch5,10%);
-    line-height:@font-swatch5-line-height;
+.widget {
+    &.profile {
+        span {
+            display: block;
+            .p-font;
+        }
+    }
 }
 
-.widget.profile a:hover {
-    color: @color-swatch1;
-    text-decoration: none;
+/* -- SOCIAL ICONS -- */
+
+.widget {
+    &.profile {
+        .bk-profile-socialicons {
+            margin: 1em 0;
+            .p-font;
+
+            a {
+                text-decoration: none;
+                text-indent: -9999px;
+                white-space: nowrap;
+            }
+
+            span {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    margin-right: 6px;
+                    margin-bottom: 6px;
+                    background-size: 18px;
+                    width: 32px;
+                    height: 32px;
+                    background-color: @font-swatch7-background-color;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    &:hover {
+                        background-color: @font-swatch7-background-color-hover;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* FOOTER PROFILE - TWITTER */
+/* FOOTER SOCIAL ICONS */
 
-.widget.profile ul.twitter {
-  padding: 0px;
-  margin: 0px;
+footer {
+    .widget {
+        &.profile {
+            .bk-profile-socialicons {
+                span {
+                    a {
+                        background-color: @color-swatch4;
+                            &:hover {
+                                background-color: darken(@color-swatch4,3%);
+                            }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.widget.profile ul.twitter li {
-  list-style: none;
+/* -- PROFILE TWITTER -- */
+
+.widget {
+    &.profile {
+        ul {
+            &.twitter {
+                padding: 0;
+                margin: 0;
+                li {
+                    list-style: none;
+                }
+                .twitter-profile-pic,
+                time,
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
-.widget.profile ul.twitter img, .widget.profile ul.twitter time,
-.widget.profile ul.twitter span {
-  display: none;
+/* PROFILE SIGNUP FORM */
+
+.widget {
+    &.profile  {
+        form {
+            padding: 0;
+            margin: 1em 0;
+            fieldset {
+                padding: 0;
+                border: 0;
+                margin: 0;
+                label {
+                    display: none;
+                }
+                input {
+                    height: 42px;
+                    width: 40%;
+                    min-width: 160px;
+                    background-color: darken(@color-swatch4,3%);
+                    border: none;
+                    .p-font;
+                    text-indent: 10px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            button {
+                padding: 10px 14px 8px;
+                margin: 0;
+                border: 0;
+                text-decoration: none;
+                background-color: @font-swatch7-background-color;
+                font-family:@font-swatch7-font-family;
+                font-size: @font-swatch7-font-size;
+                font-weight:@font-swatch7-font-weight;
+                line-height:@font-swatch7-line-height;
+                color:@font-swatch7-color;
+                letter-spacing: @font-swatch7-letter-spacing;
+                text-decoration: none;
+                &:hover {
+                    background-color: @font-swatch7-background-color-hover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
-
-/* FOOTER PROFILE - SIGNUP FORM */
-
-.widget.profile form {
-  padding: 0px;
-}
-
-.widget.profile form fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-.widget.profile form label {
-  display: none;
-  width: 100%;
-  float: left;
-  margin-bottom: 6px;
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  font-weight: 300;
-  line-height: @font-swatch5-line-height;
-  color: lighten(@font-swatch5-color,15%);
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.profile form input {
-  height: 42px;
-  background-color: darken(@color-swatch4,3%);
-  border: 1px solid darken(@color-swatch4,13%);
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height: @font-swatch5-line-height;
-  color: lighten(@font-swatch5-color,25%);
-  letter-spacing: @font-swatch5-letter-spacing;
-  text-indent: 16px;
-  -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-        border-radius: 3px;
-}
-
-.widget.profile form input:focus {
-  outline: none;
-}
-
-.widget.profile form button {
-    padding: 15px 10px;
-    margin: 0;
-    border: 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-        border-radius: 2px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
-
-    font-family: @font-swatch2-font-family;
-    font-size:.8em;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @color-swatch3;
-    color: @color-swatch1;
-    text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.3); 
-}
-
-.widget.profile form button:hover {
-    cursor: pointer;
-    background-color: darken(@color-swatch2,5%)
-}
-
 
 
 /* ===============================
    MAP WIDGET
    =============================== */
 
-.widget.map  {
-  margin: 0px;
-  padding: 20px;
-  background-color: lighten(@color-swatch5,22%);
-}
-
-.widget.map .map {
-
+.widget {
+    &.map {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
@@ -1298,131 +1489,110 @@ hr {
    SIGNUP FORM WIDGET
    =============================== */
 
-.widget.signupform {
-  padding: 0px;
-}
-
-.widget.signupform fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-.widget.signupform label {
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-    font-family:@font-swatch1-font-family;
-    font-size:font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@color-swatch4;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-.widget.signupform fieldset input {
-    height: 42px;
-    width: 42%;
-    background-color: lighten(@color-swatch5,22%);
-    /*background-color: lighten(@color-swatch5,46%);*/
-    border: 1px solid lighten(@color-swatch5,15%);
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.widget.signupform fieldset input:focus {
-  outline: none;
-}
-
-.widget.signupform button {
-    padding: 15px 10px;
-    margin: 0;
-    border: 0;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
-
-    font-family: @font-swatch2-font-family;
-    font-size:.8em;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @color-swatch3;
-    color: @color-swatch1;
-    text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-}
-
-.widget.signupform button:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch2,5%);
-}
-
-.widget.signupform button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
+.widget {
+    &.signupform {
+        padding: 0;
+        fieldset {
+            padding: 0;
+            border: 0;
+            margin: 0;
+            label {
+                float: left;
+                width: 100%;
+                margin-bottom: 10px;
+                font-family:@font-swatch4-font-family;
+                font-size:font-swatch4-font-size;
+                font-weight:@font-swatch4-font-weight;
+                line-height:@font-swatch4-line-height;
+                color:@font-swatch4-color;
+                letter-spacing: @font-swatch4-letter-spacing;
+            }
+            input {
+                height: 42px;
+                width: 42%;
+                border: 1px solid lighten(@color-swatch5,10%);
+                .p-font;
+                text-indent: 12px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                padding: 11px 14px 9px;
+                margin: 0;
+                border: 0;
+                text-decoration: none;
+                background-color: @font-swatch7-background-color;
+                font-family:@font-swatch7-font-family;
+                font-size: @font-swatch7-font-size;
+                font-weight:@font-swatch7-font-weight;
+                line-height:@font-swatch7-line-height;
+                color:@font-swatch7-color;
+                letter-spacing: @font-swatch7-letter-spacing;
+                text-decoration: none;
+                &:hover {
+                    background-color: @font-swatch7-background-color-hover;
+                    cursor: pointer;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
 }
 
 
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
-.widget.responsiveslideshow .slideshow-image-list {
-    height: 300px;
-}
-
-.widget.responsiveslideshow .slideshow-widget {
-    background-color: lighten(@color-swatch5,17%);
-}
-.widget.responsiveslideshow span.inner img {
-    width:auto;
-    height:100%;
-}
-
-.widget.responsiveslideshow .image-wrapper {
-    padding:15px;
-}
-
-.widget.responsiveslideshow .crop .image-wrapper {
-    padding:0;
-}
-
-.widget.responsiveslideshow .content-wrapper {
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    top:auto;
-    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
-}
-
-.widget.responsiveslideshow .slideshow-image-list {
-    height:450px;
-  }
-
-.widget.responsiveslideshow .title {
-    display: inline-block;
-    padding:5px 20px 0 20px;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:bkscale(@font-swatch5-line-height, 0.55);
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.responsiveslideshow .description {
-    display: block;
-    padding: 6px 20px;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:bkscale(@font-swatch5-line-height, 0.55);
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
+.widget {
+    &.responsiveslideshow {
+        .slideshow-image-list {
+            height: 300px;
+        }
+        span {
+            &.inner {
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+        .image-wrapper {
+            padding: 0;
+        }
+        .crop {
+            .image-wrapper {
+                padding: 0
+            }
+        }
+        .content-wrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: auto;
+            background-color: lighten(@color-swatch5,20%);
+        }
+        .slideshow-image-list {
+            height: 450px;
+        }
+        .title,
+        .description {
+            display: inline-block;
+            padding:5px 20px 0 20px;
+            font-family:@font-swatch5-font-family;
+            font-size:@font-swatch5-font-size;
+            font-weight: @font-swatch5-font-weight;
+            line-height:bkscale(@font-swatch5-line-height, 0.55);
+            color: @color-swatch1;
+            letter-spacing: @font-swatch5-letter-spacing;
+        }
+        .description {
+            padding: 6px 20px;
+        }
+    }
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev, 
@@ -1477,35 +1647,6 @@ hr {
    =============================== */
 
 @media only screen and (max-width: 768px) {
-
-
-  /* FEATURE */
-
-   .widget.feature .feature-bgimg {
-    height: 300px;
-   }
-
-  .widget.feature .content {
-    height: 300px;
-  }
-
-  .widget.feature h2 {
-    font-size:bkscale(@font-swatch8-font-size, 0.7); /* 25px */
-    line-height:bkscale(@font-swatch8-line-height, 0.8); /* 40px */
-  }
-
-  .widget.feature h2 span {
-    padding: 10px;
-  }
-
-  .widget.feature h3 {
-    font-size:bkscale(@font-swatch9-font-size, 0.7); /* 40px */
-    line-height:bkscale(@font-swatch9-line-height, 0.8); /* 40px */
-  }
-
-  .widget.feature .feature-btn button {
-    font-size: .9em;
-  }
 
   .widget.responsiveslideshow .slideshow-image-list, 
   .widget.responsiveslideshow .slideshow-widget {
