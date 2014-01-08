@@ -1,4 +1,0 @@
-bkbootstrap
-===========
-
-BK Bootstrap Test
