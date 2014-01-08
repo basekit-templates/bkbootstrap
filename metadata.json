@@ -91,7 +91,7 @@
         },
         "font5": {
             "font-family": "Lato",
-            "font-size": "14px",
+            "font-size": "15px",
             "font-weight": "500",
             "line-height": "28px",
             "color": "@color-swatch5",
@@ -99,9 +99,9 @@
         },
         "font6": {
             "font-family": "Lato",
-            "font-size": "12px",
+            "font-size": "15px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "48px",
             "color": "@color-swatch6",
             "color-hover": "lighten(@color-swatch6,10%)",
             "letter-spacing": "1px",
@@ -138,7 +138,7 @@
             "font-family": "Lato",
             "font-size": "22px",
             "font-weight": "300",
-            "line-height": "30px",
+            "line-height": "48x",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }
