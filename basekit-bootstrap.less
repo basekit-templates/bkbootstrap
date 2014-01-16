@@ -63,7 +63,10 @@ a {
 
 h1, h2, h3, h4, h5, p {
     margin: 0;
-    padding: 0 0 10px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
 }
 
 h1 {
@@ -153,12 +156,21 @@ blockquote {
    =============================== */
 
 .main {
-    padding: 2.5em 0;
+    padding-top: 2.5em;
+    padding-right: 0;
+    padding-bottom: 2.5em;
+    padding-left: 0;
     @media @tablet {
-        padding: 2em 0;
+        padding-top: 2em;
+        padding-right: 0;
+        padding-bottom: 2em;
+        padding-left: 0;
     }
     @media @mobile {
-        padding: 5px 0px;
+        padding-top: 1.5em;
+        padding-right: 0;
+        padding-bottom: 1.5em;
+        padding-left: 0;
     }
 }
 
@@ -179,7 +191,6 @@ header {
 
 .companyheader {
     display: block;
-    float: left;
 }
 
 /* COMPANY NAME */
@@ -187,7 +198,6 @@ header {
 .widget {
     &.companyname {
         display: block;
-        float: left;
         a {
             font-family: @font-swatch10-font-family;
             font-weight: @font-swatch1-font-weight;
@@ -212,8 +222,6 @@ header {
 .widget {
     &.logo {
         display: block;
-        float: left;
-        margin-right: 10px;
     }
 }
 
@@ -236,13 +244,8 @@ footer {
 
 .widget {
     .extendednavigation {
-        float: right;
         position: relative;
         max-width: 700px;
-        @media @tablet { 
-            float: none;
-        }
-
         li {
             ul {
                 display: none;
@@ -258,7 +261,7 @@ footer {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                border-top: 1px solid @color-swatch2;
+                border-top: 1px solid @color-swatch5;
                 margin: 1em 0 0;
             }
 
