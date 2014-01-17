@@ -1,6 +1,6 @@
 
 /* 
-version: 0.1.0
+version: 0.1.1
 
 Table of Contents -
 
@@ -24,10 +24,13 @@ Table of Contents -
   18. Dropbox
   19. Paypal
   20. Social
-  21. Map
-  22. Signup Form
-  23. Misc Media Queries
-  24. Clearfix
+  21. Profile Widget
+  22. Map Widget
+  23. Signup Form Widget
+  24. Slideshow Widget
+  25. Misc Media Queries
+  26. Clearfix
+  27. Blog Styles
 
 */
 
@@ -230,7 +233,7 @@ header {
    =============================== */
 
 footer {
-    background-color: darken(@color-swatch4,10%);
+/*     background-color: darken(@color-swatch4,10%); */
     padding: 2em 0;
     min-height: 150px;
     @media @tablet {
@@ -1729,4 +1732,17 @@ footer {
 }
 .clearfix {
   *zoom: 1;
+}
+
+/* ===============================
+   27. BLOG STYLES
+   =============================== */
+
+.blog-post-metadata {
+	ul, ol {
+		padding: 0;
+	}
+	li {
+		display: inline;
+	}
 }
