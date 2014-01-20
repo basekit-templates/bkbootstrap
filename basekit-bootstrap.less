@@ -31,6 +31,8 @@ Table of Contents -
   25. Misc Media Queries
   26. Clearfix
   27. Blog Styles
+  28. Menu sections
+  29. Menu styles
 
 */
 
@@ -184,6 +186,7 @@ blockquote {
 header {
     padding: 1.5em 0;
     margin: 0;
+    clear: both;
     @media @tablet {
         padding: 1.2em 0;
     }
@@ -246,6 +249,7 @@ footer {
     .extendednavigation {
         position: relative;
         max-width: 700px;
+        min-height: 40px;
         li {
             ul {
                 display: none;
@@ -261,8 +265,7 @@ footer {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                border-top: 1px solid @color-swatch5;
-                margin: 1em 0 0;
+                padding-top: 40px;
             }
 
             /* ALIGN CENTER */
@@ -312,12 +315,6 @@ footer {
                     padding: 1em 0;
                     border-bottom: 1px solid @color-swatch2;
                 }
-                &:last-child {
-                    @media @tablet {
-                        border-bottom: 0;
-                    }
-                }
-
                 &:hover {
                     ul {
                         display: block;
@@ -325,7 +322,7 @@ footer {
                         background-color: @color-swatch7;
                         z-index: 500;
                         padding: 0;
-                        margin: 0 0 0;
+                        margin: 16px 0 0;
                         li {
                             display: block;
                             width: 100%;
@@ -349,7 +346,7 @@ footer {
                     color: @font-swatch6-color;
                     line-height: @font-swatch6-line-height;
                     letter-spacing: @font-swatch6-letter-spacing;
-                    &:hover {
+                    :hover {
                         color: @font-swatch6-color-hover;
                         text-decoration: none;
                     }
@@ -357,12 +354,8 @@ footer {
 
                 &.folder {
                     /* Folder dropdown arrow BG style goes Here */  
-                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGREQ2MUE4QkNCOEUxMUUyQjEzQzk3QzRBNUM4MTIxQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGREQ2MUE4Q0NCOEUxMUUyQjEzQzk3QzRBNUM4MTIxQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZERDYxQTg5Q0I4RTExRTJCMTNDOTdDNEE1QzgxMjFDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZERDYxQThBQ0I4RTExRTJCMTNDOTdDNEE1QzgxMjFDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4oNJ6AAAAE1JREFUeNpi/P//PwMxgImBSMACYzi7+x0FUlZA/A0qxAXEx/bu3GSNbmIAEJ+CKuCCsgNgkozIbgSaKgKk9kO5jkDT3mBVSBXPAAQYABqGFk0oItvmAAAAAElFTkSuQmCC);
-                    background-position: right center;
-                    background-repeat: no-repeat; 
                     margin-right: 20px;            
                     cursor: pointer;
-
                     .text {
                         display: block;
                         padding: 0 20px;
@@ -372,9 +365,35 @@ footer {
                         color: @font-swatch6-color;
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
+                        position: relative;
                         &:hover {
                             color: @font-swatch6-color-hover;
                             text-decoration: none;
+                        }
+                        &:after {
+                            content: "▼";
+                            font-size: 5px;
+                            position: absolute;
+                            top: 1px;
+                            display: block;
+                            z-index: 9999999;
+                            right: 0;
+                            color: @font-swatch6-color;
+                            @media @tablet {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            a {
+                                .text {
+                                    padding: 0;
+                                    &:after {
+                                        content: "";
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -386,18 +405,21 @@ footer {
                 display: none;
                 @media @tablet {
                     display: block;
-                    width: 100%;
+                    width: 20px;
+                    height: 44px;
                     position: absolute;
-                    top: 10px;
-                    &:after {
-                        content:"";
-                        background: url(data:image/png;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABcAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFCOUJDQzIwMEMyMTFFM0I4NDE5OUY3REYzMkY2N0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFCOUJDQzMwMEMyMTFFM0I4NDE5OUY3REYzMkY2N0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUI5QkNDMDAwQzIxMUUzQjg0MTk5RjdERjMyRjY3RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUI5QkNDMTAwQzIxMUUzQjg0MTk5RjdERjMyRjY3RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAEBAQEBAQEBAQEBAQEBAQIBAQEBAgICAgICAgIDAgICAgICAwMDAwMDAwMEBAQEBAQGBgYGBgcHBwcHBwcHBwcBAQEBAgICBAMDBAYFBAUGBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHB//AABEIAA8AGQMBEQACEQEDEQH/xABiAAEBAAAAAAAAAAAAAAAAAAAAAgEBAQAAAAAAAAAAAAAAAAAAAAUQAAAEBwEAAAAAAAAAAAAAAADXCFmTBZUGGAkZChEAAAUEAwAAAAAAAAAAAAAAAPABgVJRAgMUEhME/9oADAMBAAIRAxEAPwCsYPL+4ysuhzcsBc7PTFC4mcMNVLBjB5f3GVl0OblgHZ6YoXDhhqpYMYPL+4ysuhzcsA7PTFC4cMNVLBjB5f3GVl0OblgHZ6YoXDhhqpYO42vZg9GkeyC8DTyTUuGxbFCwdxtezB6NI9kF4GnkmpcNi2KFg7ja9mD0aR7ILwNPJNS4bFsULB3G17MHo0j2QXgaeSalw2LYoWH/2Q==) no-repeat;
-                        width: 30px;
-                        height: 30px;
-                        display: inline-block;
-                        position: absolute;
-                        right: 0;
-                    }
+                    right: 0;
+                    margin-right: 10px;
+                   &:after {
+                       content: '';
+                       position: absolute;
+                       width: 100%;
+                       height: 3px;
+                       background: @color-swatch6;
+                       top: 15px;
+                       left: 0;
+                       box-shadow: 0 6px 0 @color-swatch6, 0 12px 0 @color-swatch6;
+                   }
                 }
             }
         }
@@ -557,7 +579,6 @@ footer {
                 background-color: @color-swatch3;
                 background-position: 10px;
                 background-repeat:no-repeat;
-                display: block;
                 padding: 10px 10px 10px 38px;
                 border: 0;
                 background-color: @font-swatch7-background-color;
@@ -1727,16 +1748,16 @@ footer {
    =============================== */
 
 .blog-post-metadata {
-	ul, ol {
-		padding: 0;
-	}
-	li {
-		display: inline;
-	}
+    ul, ol {
+        padding: 0;
+    }
+    li {
+        display: inline;
+    }
 }
 
 /* ===============================
-   28. MENU NAVIGATION
+   28. MENU SECTIONS
    =============================== */
 
 .widget {
