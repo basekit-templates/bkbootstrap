@@ -377,10 +377,8 @@ footer {
                             text-decoration: none;
                         }
                     }
-
                 }
             }
-
         }
 
         a {
@@ -559,6 +557,7 @@ footer {
                 background-color: @color-swatch3;
                 background-position: 10px;
                 background-repeat:no-repeat;
+                display: block;
                 padding: 10px 10px 10px 38px;
                 border: 0;
                 background-color: @font-swatch7-background-color;
@@ -569,7 +568,7 @@ footer {
                 color: @font-swatch7-color;
                 letter-spacing: @font-swatch7-letter-spacing;
                 text-decoration: none;
-            }
+            }     
             &:hover {
                 cursor: pointer;
                 @media @mobile {
@@ -970,7 +969,7 @@ hr {
         fieldset {
             border: none;
             padding: 0;
-            margin: 0;
+            margin: 2em 0;
 
             label {
                 width: 100%;
@@ -996,7 +995,6 @@ hr {
             textarea {
                 height: 100px;
                 width: 100%;
-                border: 1px solid lighten(@color-swatch5,10%);
                 font-family: @font-swatch5-font-family;
                 font-size: @font-swatch5-font-size;
                 color: @font-swatch5-color;
@@ -1540,7 +1538,7 @@ footer {
                 letter-spacing: @font-swatch4-letter-spacing;
             }
             input {
-                height: 42px;
+                height: 45px;
                 width: 42%;
                 .p-font;
                 text-indent: 12px;
@@ -1552,7 +1550,7 @@ footer {
                 }
             }
             button {
-                padding: 11px 14px 9px;
+                padding: 10px 14px 12px;
                 margin: 0;
                 border: 0;
                 text-decoration: none;
@@ -1735,4 +1733,88 @@ footer {
 	li {
 		display: inline;
 	}
+}
+
+/* ===============================
+   28. MENU NAVIGATION
+   =============================== */
+
+.widget {
+    &.menusections {
+        margin: 1em auto; 
+        ul {
+            padding: 1em 0;
+            margin: 0 auto;
+            max-width: 960px;
+            list-style: none;
+            li {
+                display: inline-block;
+                margin: 0 1em;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }    
+    }
+}
+
+/* ===============================
+   29. MENU STYLES
+   =============================== */
+
+.widget {
+    &.menu {
+        .main {
+            padding: 0;
+        }
+        .menu-items {
+            padding-left: 0;
+            li {
+                list-style: none;
+                padding: 1.5em 0;
+            }
+        }
+        .menu-subsection {
+            border: 1px solid fade(@color-swatch5, 25%);
+            padding: 4%;
+            margin: 1.5em 0;
+            li { 
+                list-style: none;
+            }
+        }
+        .menu-section-item-dietary-props, .menu-info {
+            .dietary-icon {
+                background-color: fade(@color-swatch5, 25%);
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                border: 0;
+                margin: 5px 5px 0 0;
+                border-radius: 100px;
+                -moz-border-radius: 100px;
+                -webkit-border-radius: 100px;
+                text-align: center;
+            }
+            .nutFree-icon {
+                &:before {
+                    content: "nf";
+                }  
+            }
+            .vegetarian-icon {
+                &:before {
+                    content: "v";
+                }
+            }
+            .glutenFree-icon {
+                &:before {
+                    content: "gf";
+                }
+            }
+            .dairyFree-icon {
+                &:before {
+                    content: "df";
+                }
+            }   
+        }
+    }
 }
