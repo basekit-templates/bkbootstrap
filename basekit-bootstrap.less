@@ -47,11 +47,6 @@ body {
     box-siing: border-box; /* Opera/IE 8+ */
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
 a {
     .p-font;
     color: @color-swatch3;
@@ -393,7 +388,8 @@ footer {
                     top: 10px;
                     &:after {
                         content:"";
-                        background: url(data:image/png;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABcAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFCOUJDQzIwMEMyMTFFM0I4NDE5OUY3REYzMkY2N0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFCOUJDQzMwMEMyMTFFM0I4NDE5OUY3REYzMkY2N0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUI5QkNDMDAwQzIxMUUzQjg0MTk5RjdERjMyRjY3RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUI5QkNDMTAwQzIxMUUzQjg0MTk5RjdERjMyRjY3RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAEBAQEBAQEBAQEBAQEBAQIBAQEBAgICAgICAgIDAgICAgICAwMDAwMDAwMEBAQEBAQGBgYGBgcHBwcHBwcHBwcBAQEBAgICBAMDBAYFBAUGBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHB//AABEIAA8AGQMBEQACEQEDEQH/xABiAAEBAAAAAAAAAAAAAAAAAAAAAgEBAQAAAAAAAAAAAAAAAAAAAAUQAAAEBwEAAAAAAAAAAAAAAADXCFmTBZUGGAkZChEAAAUEAwAAAAAAAAAAAAAAAPABgVJRAgMUEhME/9oADAMBAAIRAxEAPwCsYPL+4ysuhzcsBc7PTFC4mcMNVLBjB5f3GVl0OblgHZ6YoXDhhqpYMYPL+4ysuhzcsA7PTFC4cMNVLBjB5f3GVl0OblgHZ6YoXDhhqpYO42vZg9GkeyC8DTyTUuGxbFCwdxtezB6NI9kF4GnkmpcNi2KFg7ja9mD0aR7ILwNPJNS4bFsULB3G17MHo0j2QXgaeSalw2LYoWH/2Q==) no-repeat;
+                        background: #c7c7c7;
+						box-shadow: 0 6px 0 #c7c7c7, 0 12px 0 #c7c7c7;
                         width: 30px;
                         height: 30px;
                         display: inline-block;
@@ -1705,13 +1701,6 @@ footer {
                 }
             }
         }
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-    .wrapper {
-        width: 960px; /* 1140px - 10% for margins */
-        margin: 0 auto;
     }
 }
 
