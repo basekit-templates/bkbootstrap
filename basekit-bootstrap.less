@@ -372,19 +372,6 @@ footer {
                             color: @font-swatch6-color-hover;
                             text-decoration: none;
                         }
-                        &:after {
-                            content: "▼";
-                            font-size: 5px;
-                            position: absolute;
-                            top: 1px;
-                            display: block;
-                            z-index: 9999999;
-                            right: 0;
-                            color: @font-swatch6-color;
-                            @media @tablet {
-                                padding-right: 10px;
-                            }
-                        }
                     }
                     ul {
                         li {
@@ -442,7 +429,6 @@ footer {
 
             .content {
                 height: 500px;
-                text-align: center;
                 @media @mobile {
                     height: 220px;
                 }
@@ -1866,6 +1852,15 @@ footer {
                 padding: 1.5em 0;
             }
         }
+         .menu-item-image-wrap {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 200px;
+            img {
+                display: none;
+            }
+        }
         .menu-subsection {
             border: 1px solid fade(@color-swatch5, 25%);
             padding: 4%;
@@ -1882,31 +1877,50 @@ footer {
                 height: 26px;
                 border: 0;
                 margin: 5px 5px 0 0;
-                border-radius: 100px;
-                -moz-border-radius: 100px;
-                -webkit-border-radius: 100px;
                 text-align: center;
             }
-            .nutFree-icon {
-                &:before {
-                    content: "nf";
-                }  
-            }
             .vegetarian-icon {
-                &:before {
-                    content: "v";
+                &:before { 
+                    content: "veggie";
                 }
             }
-            .glutenFree-icon {
-                &:before {
+            .vegan-icon {
+                &:before { 
+                    content: "vegan";
+                }
+            }
+            .glutenfree-icon {
+                &:before { 
                     content: "gf";
                 }
             }
-            .dairyFree-icon {
-                &:before {
+            .nutfree-icon {
+                &:before { 
+                    content: "nf";
+                }
+            }
+            .dairyfree-icon {
+                &:before { 
                     content: "df";
                 }
-            }   
+            }
+            .medium-spicy-icon {
+                &:before { 
+                    content: "medium";
+                }
+            }
+            .hot-icon {
+                &:before { 
+                    content: "hot";
+            }
+            .spicy-icon {
+                &:before { 
+                    content: "mild";
+                }
+            }
+            .not-spicy-icon {
+                display: none;
+            }
         }
     }
 }
