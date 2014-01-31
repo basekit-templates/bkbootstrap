@@ -1,146 +1,83 @@
-/* 
-version: 1.3.0
+// BK Bootstrap v 2.0
 
-Table of Contents -
-
-  1. Default
-  2. Media Queries
-  3. Custom CSS
-  4. Header
-  5. Footer
-  6. Extended Nav
-  7. Feature
-  8. Click to Call
-  9. Button
-  10. Content
-  11. Image
-  12. Gallery
-  13. Divider
-  14. Redirect
-  15. Twitter
-  16. Contact Form
-  17. Tweet This
-  18. Dropbox
-  19. Paypal
-  20. Social
-  21. Profile Widget
-  22. Map Widget
-  23. Signup Form Widget
-  24. Slideshow Widget
-  25. Misc Media Queries
-  26. Clearfix
-  27. Blog Styles
-  28. Menu sections
-  29. Menu styles
-
-*/
-
-/* ===============================
-   1. DEFAULT
-   =============================== */
-
-body {
-    background-color: @color-swatch1;
-    margin: 0;
-    padding: 0;
+.widget {
+	float: left;
+	width: 100%;
+	clear: both;
+	border: 1px solid @element-widget-border;
 }
 
-.box-sizing {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-siing: border-box; /* Opera/IE 8+ */
+.align-center,
+div.align-center,
+a img.align-center {
+    display: block;
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
 
-a {
-    .p-font;
-    color: @color-swatch3;
-    text-decoration: none;
-        &:hover {
-        text-decoration: underline;
-    }
+.align-right,
+div.align-right,
+a img.align-right {
+    float: right;
+    text-align: right;
 }
 
-h1, h2, h3, h4, h5, p {
-    margin: 0;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 10px;
-    padding-left: 0;
+.align-left,
+div.align-left,
+a img.align-left {
+    float: left;
+    text-align: left;
 }
 
-h1 {
-    font-family: @font-swatch1-font-family;
-    font-weight: @font-swatch1-font-weight;
-    color: @font-swatch1-color;
-    line-height: @font-swatch1-line-height;
-    letter-spacing: @font-swatch1-letter-spacing;
-    font-size: @font-swatch1-font-size;
-}
-
-h2 {
-    font-family: @font-swatch2-font-family;
-    font-size: @font-swatch2-font-size;
-    font-weight: @font-swatch2-font-weight;
-    line-height: @font-swatch2-line-height;
-    color: @font-swatch2-color;
-    letter-spacing: @font-swatch2-letter-spacing;
-}
-
-h3 {
-    font-family: @font-swatch3-font-family;
-    font-size: @font-swatch3-font-size;
-    font-weight: @font-swatch3-font-weight;
-    color: @font-swatch3-color;
-    line-height: @font-swatch3-line-height;
-    letter-spacing: @font-swatch3-letter-spacing;
-}
-
-h4 {
-    font-family: @font-swatch4-font-family;
-    font-size: @font-swatch4-font-size;
-    font-weight: @font-swatch4-font-weight;
-    line-height: @font-swatch4-line-height;
-    color: @font-swatch4-color;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-p, .p-font {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ul, ol, li {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-blockquote {
-    background: lighten(@color-swatch5,20%);
-    margin: 0;
-    padding: 20px;
-    quotes:"\201C""\201D""\2018""\2019";
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    &:before {
-        font-family: georgia;
-        color: @font-swatch5-color;
-        content: open-quote;
-        font-size: 4em;
-        line-height: .1em;
-        margin-right: .1em;
-        vertical-align: -.4em;
-    }
+.extendednavigation {
+	ul {
+		padding: 0;
+		list-style: none;
+		ul {
+			position: absolute;
+			z-index: 1;
+			
+			display: none;
+		}
+	}
+	li {
+		display: inline-block;
+		position: relative;
+		li {
+			display: list-item;
+		}
+	}
+	ul li:hover {
+		ul {
+			display: block;
+		}
+	}
+	.folder {
+		color: @text-links;
+		position: relative;
+		padding-right: 15px;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			border: 3px solid transparent;
+			border-top-color: @text-body;
+			top: 45%;
+			right: 5%;
+		}
+	}
+	.pull {
+		position: relative;
+		float: right;
+		
+		display: none;
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: "\2630";
+		}
+	}
 }
 
 /* ===============================
@@ -150,757 +87,124 @@ blockquote {
 @tablet: ~"only screen and (max-width: 769px)";
 @mobile: ~"only screen and (max-width: 480px)";
 
-/* ===============================
-   3. CUSTOM CSS
-   =============================== */
-
-.main {
-    padding-top: 2.5em;
-    padding-right: 0;
-    padding-bottom: 2.5em;
-    padding-left: 0;
-    @media @tablet {
-        padding-top: 2em;
-        padding-right: 0;
-        padding-bottom: 2em;
-        padding-left: 0;
-    }
-    @media @mobile {
-        padding-top: 1.5em;
-        padding-right: 0;
-        padding-bottom: 1.5em;
-        padding-left: 0;
-    }
-}
-
-/* ===============================
-   4. HEADER
-   =============================== */
-
-header {
-    padding: 1.5em 0;
-    margin: 0;
-    clear: both;
-    @media @tablet {
-        padding: 1.2em 0;
-    }
-}
-
-/* COMPANY HEADER */
-
-.companyheader {
-    display: block;
-}
-
-/* COMPANY NAME */
-
-.widget {
-    &.companyname {
-        display: block;
-        a {
-            font-family: @font-swatch10-font-family;
-            font-weight: @font-swatch1-font-weight;
-            color: @font-swatch10-color;
-            line-height: @font-swatch10-line-height;
-            letter-spacing: @font-swatch10-letter-spacing;
-            font-size: @font-swatch10-font-size;
-            &:hover {
-                cursor: pointer;
-                text-decoration: none;
-            }
-            @media @mobile {
-                font-size: bkscale(@font-swatch1-font-size, 0.6);
-            }
-        }
-    }
-
-}
-
-/* LOGO */
-
-.widget {
-    &.logo {
-        display: block;
-    }
-}
-
-/* ===============================
-   5. FOOTER
-   =============================== */
-
-footer {
-    padding: 2em 0;
-    @media @tablet {
-        padding: 1.6em 0;
-    }
-}
-
-/* ===============================
-   6. EXTENDED NAVIGATION
-   =============================== */
-
-.widget {
-    .extendednavigation {
-        position: relative;
-        max-width: 700px;
-        li {
-            ul {
-                display: none;
-            }
-        }
-
-        ul {
-            float: left;
-            margin: 0;
-            padding: 0;
-            @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
-                /* Then these styles are applied */
-                width: 100%;
-                padding-top: 40px;
-            }
-
-            /* ALIGN CENTER */
-
-            &.align-center {
-                li {
-                    text-align: center;
-                    &:hover {
-                        li {
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-
-            /* ALIGN LEFT */
-
-            &.align-left {
-                li {
-                    text-align: left;
-                    &:hover {
-                        li {
-                            text-align: left;
-                        }
-                    }
-                }
-            }
-
-            /* ALIGN RIGHT */
-
-            &.align-right {
-                li {
-                    text-align: right;
-                    &:hover {
-                        li {
-                            text-align: right;
-                        }
-                    }
-                }
-            }
-
-            li {
-                float: left;
-                display: block;
-                @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    border-bottom: 1px solid @color-swatch2;
-                }
-                &:hover {
-                    ul {
-                        display: block;
-                        position: absolute;
-                        background-color: @color-swatch7;
-                        z-index: 500;
-                        padding: 0;
-                        margin: 0 0 0;
-                        @media @tablet {
-                            margin: 16px 0 0;
-                        }
-                        li {
-                            display: block;
-                            width: 100%;
-                                .box-sizing {
-                                    a {
-                                        display: block;
-                                        color: @color-swatch5;
-                                        padding: 0;
-                                    }
-                                }
-                        }
-                    }
-                }
-
-                a {
-                    display: block;
-                    padding: 0 20px;
-                    font-family: @font-swatch6-font-family;
-                    font-size: @font-swatch6-font-size;
-                    font-weight: @font-swatch6-font-weight;
-                    color: @font-swatch6-color;
-                    line-height: @font-swatch6-line-height;
-                    letter-spacing: @font-swatch6-letter-spacing;
-                    :hover {
-                        color: @font-swatch6-color-hover;
-                        text-decoration: none;
-                    }
-                }
-
-                &.folder {
-                    /* Folder dropdown arrow BG style goes Here */  
-                    margin-right: 20px;            
-                    cursor: pointer;
-                    .text {
-                        display: block;
-                        padding: 0 20px;
-                        font-family: @font-swatch6-font-family;
-                        font-size: @font-swatch6-font-size;
-                        font-weight: @font-swatch6-font-weight;
-                        color: @font-swatch6-color;
-                        line-height: @font-swatch6-line-height;
-                        letter-spacing: @font-swatch6-letter-spacing;
-                        position: relative;
-                        &:hover {
-                            color: @font-swatch6-color-hover;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        a {
-            &.pull {
-                display: none;
-                @media @tablet {
-                    display: block;
-                    width: 36px;
-                    height: 40px;
-                    position: absolute;
-                    top: 0;
-                    width: 40px;
-					right: 0;
-                    &:after {
-                        content:"";
-                        width: 20px;
-                        height: 4px;
-                        display: inline-block;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* ===============================
    7. FEATURE
    =============================== */
 
- .widget {
-    &.feature {
-        .feature-bgimg {
-            height: 500px;
-            @media @mobile {
-                height: 220px;
-            }
-
-            .content {
-                height: 500px;
-                @media @mobile {
-                    height: 220px;
-                }
-
-                h2 {
-                    font-family: @font-swatch8-font-family;
-                    font-size: @font-swatch8-font-size;
-                    font-weight: @font-swatch8-font-weight;
-                    line-height: @font-swatch8-line-height;
-                    color: @font-swatch8-color;
-                    letter-spacing: @font-swatch8-letter-spacing;
-                    span {
-                        display: inline-block;
-                        padding: 20px;
-                    }
-                    @media @mobile {
-                        font-size: bkscale(@font-swatch8-font-size, 0.6); /* 20px */
-                        line-height: bkscale(@font-swatch8-line-height, 0.5); /* 30px */
-                    }
-                }
-
-                h3 {
-                    font-family: @font-swatch9-font-family;
-                    font-size: @font-swatch9-font-size;
-                    font-weight: @font-swatch9-font-weight;
-                    line-height: @font-swatch9-line-height;
-                    color: @font-swatch9-color;
-                    letter-spacing: @font-swatch9-letter-spacing;
-                    span {
-                        display: inline-block;
-                        padding: 6px 20px;
-                    }
-                    @media @mobile {
-                        font-size: bkscale(@font-swatch9-font-size, 0.7); /* 20px */
-                        line-height: bkscale(@font-swatch9-line-height, 0.8); /* 30px */ 
-                    }
-                }
-
-                button {
-                    margin: 1em 0;
-                    padding: 8px 14px;
-                    border: 0;
-                    background-color: @font-swatch7-background-color;
-                    font-family: @font-swatch7-font-family;
-                    font-size: @font-swatch7-font-size;
-                    font-weight: @font-swatch7-font-weight;
-                    line-height: @font-swatch7-line-height;
-                    color: @font-swatch7-color;
-                    letter-spacing: @font-swatch7-letter-spacing;
-                    text-decoration: none;
-                    &:hover {
-                        background-color: @font-swatch7-background-color-hover;
-                        cursor: pointer;
-                    }
-                    @media @mobile {
-                        margin: 0;
-                    }
-
-                    &.btn {
-
-                        /* ALIGNMENTS */
-
-                        &.justifyleft {
-                            text-align: left;
-                        }
-                        &.justifycenter {
-                            text-align: center;
-                        }
-                        &.justifyright {
-                            text-align: right;
-                        }
-                        &.justifyfull {
-                            text-align: justify;
-                        }
-
-                        /* FONT STYLES */
-
-                        &.justifyitalic {
-                            font-style: italic;
-                        }
-                        &.justifybold {
-                            font-weight: bold;
-                        }
-                    }
-                    span {
-                        vertical-align: middle;
-                    }
-                    i {
-                        margin-right: 5px;
-                    }
-                }
-            }
-
-        }
-
-        &:align-left {
-            .content {
-                width: 100%;
-                text-align: left;
-            }
-        }
-        &:align-center {
-            .content {
-                width: 100%;
-                text-align: center;
-            }
-        }
-        &:align-right {
-            .content {
-                width: 100%;
-                text-align: right;
-            }
-        }
-    }
-
+.feature {
+	background-size: cover;
+	min-height: 350px;
 }
 
-/* ===============================
-   8. CLICK TO CALL WIDGET
-   =============================== */
-
-.widget {
-    &.clicktocall {
-        @media @mobile {
-            padding: 10px 0;
-        }
-        a {
-            font-family: @font-swatch5-font-family;
-            font-weight: @font-swatch5-font-weight;
-            color: @font-swatch5-color;
-            letter-spacing: @font-swatch5-letter-spacing;
-            font-size: @font-swatch5-font-size;
-            text-decoration: none;
-            @media @mobile {
-                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENTg4MDkxNUI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENTg4MDkxNkI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjYxMkE4MzU2QjRCQjExRTI5RkMwOEFDNjgzRUY3MzVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ1ODgwOTE0QjRENzExRTI5RkMwOEFDNjgzRUY3MzVCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+s2QrvwAAAPxJREFUeNpi/P//PwM1ARMDlQE2A7uAGOTsHWSZCPIyFHMC8cz/qMASSZ4ojOzCCUCchmafOyVeVsIiHwXE7OQa+BaLPC8Uk2XgdiD+icR/DMS2QPyG3EhhAeIFSBEyk9QIAadpNAFDJAP/ArE+pQaCcDOSoSepYSAIH0EydCuaHCMQ8wIxEykGigHxPSRDzwOxGlQuDIi/AfExIG4BYn8gFiBkIAjLAfFjJEM/AfFGIH7zHxMcAGJ1QgaCsDAQn/hPGDwCYhdiDIThRgIGNhPjZXSsAsQLockJGUxHVsdIYgELylmJQOwHxPxAfAGIa4D4C0wB46AvsQECDAB0BaRrDCyrSQAAAABJRU5ErkJggg==);
-                background-color: @color-swatch3;
-                background-position: 10px;
-                background-repeat:no-repeat;
-                padding: 10px 10px 10px 38px;
-                border: 0;
-                background-color: @font-swatch7-background-color;
-                font-family: @font-swatch7-font-family;
-                font-size: @font-swatch7-font-size;
-                font-weight: @font-swatch7-font-weight;
-                line-height: @font-swatch7-line-height;
-                color: @font-swatch7-color;
-                letter-spacing: @font-swatch7-letter-spacing;
-                text-decoration: none;
-            }     
-            &:hover {
-                cursor: pointer;
-                @media @mobile {
-                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENTg4MDkxNUI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENTg4MDkxNkI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjYxMkE4MzU2QjRCQjExRTI5RkMwOEFDNjgzRUY3MzVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ1ODgwOTE0QjRENzExRTI5RkMwOEFDNjgzRUY3MzVCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+s2QrvwAAAPxJREFUeNpi/P//PwM1ARMDlQE2A7uAGOTsHWSZCPIyFHMC8cz/qMASSZ4ojOzCCUCchmafOyVeVsIiHwXE7OQa+BaLPC8Uk2XgdiD+icR/DMS2QPyG3EhhAeIFSBEyk9QIAadpNAFDJAP/ArE+pQaCcDOSoSepYSAIH0EydCuaHCMQ8wIxEykGigHxPSRDzwOxGlQuDIi/AfExIG4BYn8gFiBkIAjLAfFjJEM/AfFGIH7zHxMcAGJ1QgaCsDAQn/hPGDwCYhdiDIThRgIGNhPjZXSsAsQLockJGUxHVsdIYgELylmJQOwHxPxAfAGIa4D4C0wB46AvsQECDAB0BaRrDCyrSQAAAABJRU5ErkJggg==);
-                    background-color: @font-swatch7-background-color-hover;
-                    background-position: 10px;
-                    color: @font-swatch7-color;
-                    padding: 10px 10px 10px 38px;
-                    cursor: pointer;
-                    text-decoration: none; 
-                }
-            }
-
-            /* ALIGNMENTS */
-
-            &.justifyleft {
-                text-align: left;
-            }
-            &.justifycenter {
-                text-align: center;
-            }
-            &.justifyright {
-                text-align: right;
-            }
-            &.justifyfull {
-                text-align: justify;
-            }
-
-            /* FONT STYLES */
-
-            &.justifyitalic {
-                font-style: italic;
-            }
-            &.justifybold {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-/* ===============================
-   9. BUTTON CSS
-   =============================== */
-
-.widget {
-    &.button {
-        padding: 4px 0;
-
-        button {
-            padding: 8px 14px;
-            margin: 0;
-            border: 0;
-            background-color: @font-swatch7-background-color;
-            font-family: @font-swatch7-font-family;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            line-height: @font-swatch7-line-height;
-            color: @font-swatch7-color;
-            letter-spacing: @font-swatch7-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                background-color: @font-swatch7-background-color-hover;
-                cursor: pointer;
-            }
-
-            &.btn {
-
-                /* ALIGNMENTS */
-
-                &.justifyleft {
-                    text-align: left;
-                }
-                &.justifycenter {
-                    text-align: center;
-                }
-                &.justifyright {
-                    text-align: right;
-                }
-                &.justifyfull {
-                    text-align: justify;
-                }
-
-                /* FONT STYLES */
-
-                &.justifyitalic {
-                    font-style: italic;
-                }
-                &.justifybold {
-                    font-weight: bold;
-                }
-            }  
-
-            span {
-                vertical-align: middle;
-            }
-
-            i {
-                margin-right: 5px;
-            } 
-        }
-    }
+button {
+	background: @button-background;
+	color: @button-text;
+	-webkit-appearance: none;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: inherit;
+	&:hover {
+		background: darken(@button-background, 10%);
+	}
+	&:active {
+		background: darken(@button-background, 20%);
+	}
 }
 
 /* ===============================
    10. CONTENT CSS
    =============================== */
-
-.widget {
-    .content {
-        padding: 0;
-        overflow: hidden;
-        span {
-            &.expand {
-                .p-font;
-                cursor: pointer;
-                &:hover,
-                &:focus {
-                    cursor: pointer;
-                    color: darken(@color-swatch5,5%); 
-                }
-                @media @tablet {
-                    display: none!important;
-                }
-            }
-        }
-        .bk-content-text {
-            @media @tablet {
-                overflow: visible!important;
-                height: auto!important;
-            }
-        }
-    }
+.content {
+	// Nothing to add here...
 }
 
 /* ===============================
    11. IMAGE WIDGET
    =============================== */
 
-.widget {
-    &.image {
-        img {
-            display: block;
-            max-width: 100%;
-        }
-    }
-    span {
-        &.image-title {
-            display: block;
-            margin: 5px;
-            font-family: @font-swatch4-font-family;
-            font-weight: @font-swatch4-font-weight;
-            font-size: @font-swatch4-font-size;
-            line-height: @font-swatch4-line-height;
-            text-align: center;
-        }
-        &.image-description {
-            display: block;
-            margin: 5px;
-            font-family: @font-swatch5-font-family;
-            font-weight: @font-swatch5-font-weight;
-            font-size: @font-swatch5-font-size;
-            line-height: @font-swatch5-line-height;
-            text-align: center;
-        }
-    }
+.image {
+	// Need to know markup structure in order to add any background tint that might be needed in order to show text better
+	.image-title {
+		
+	}
+	.image-description {
+		
+	}
 }
 
 /* ===============================
    12. GALLERY WIDGET
    =============================== */
 
-.widget {
-    &.gallery {
-        width: 101.2%;
-        margin-left: -0.5%;
+.gallery {
+	ul {
+	  float: left;
+      padding: 0;
+      list-style: none;
+	  margin-left: -1%;
+	}
+  	li {
+  		text-align: center;
+	  	float: left;
+        margin-left: 1%;
+        width: 24%;
+		&:after, &:before {
+			display: table;
+		}
+    }
+	.inner {
+		display: block;
+  		min-height: 300px;
+	    background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
 
-        ul {
-            display: block;
-            margin: 0;
-            padding: 0; 
-            list-style: none;
-            *zoom: 1;
-
-            &:before,
-            &:after {
-                content: "";
-                display: table;
-            }
-            &:after {
-                clear: both;
-            }
-
-            li {
-                float: left;
-                position: relative;
-                width: 33.3%;
-                padding-bottom: 33%;
-                @media @mobile {
-                    width: 100%;
-                    padding-bottom: 100%;
-                }
-
-                span {
-                    &.inner {
-                        background-position:center center;
-                        background-repeat:no-repeat;
-                        background-color: @color-swatch1;
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;
-                        position: absolute;
-                        left: 5px;
-                        right: 5px;
-                        top: 0px;
-                        bottom: 16px;
-                        overflow: hidden;
-                        img {
-                            display: none;
-                        }
-                        .title,
-                        .description {
-                            position: absolute;
-                            bottom: 0px;
-                            left: 0px;
-                            right: 0px;
-                            margin-bottom: -50px;
-                            background:@color-swatch1;
-                            background: rgba(0, 0, 0, 0.5);
-                            padding: 10px;
-                            text-align: center;
-                            -webkit-transition: all 0.3s ease-out;
-                            -moz-transition: all 0.3s ease-out;
-                            -o-transition: all 0.3s ease-out;
-                            transition: all 0.3s ease-out;
-                            font-family: @font-swatch5-font-family;
-                            font-size: @font-swatch5-font-size;
-                            font-weight: @font-swatch5-font-weight;
-                            line-height: @font-swatch5-line-height;
-                            color: @color-swatch1;
-                            letter-spacing: @font-swatch5-letter-spacing;
-                        }
-                        .title {
-                            margin-bottom: 0;
-                        }
-                        .description {
-                            display: none;
-                        }
-
-                        a {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                        }
-                    }
-                }
-
-                &.one-to-one {
-                    span {
-                        &:inner {
-                            background-size: 100% 100%;
-                        }
-                    }
-                }
-                &.portrait {
-                    span {
-                        &:inner {
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-                &.landscape {
-                    span {
-                        &:inner {
-                            background-size: auto 100%;
-                        }
-                    }
-                }
-            }
+/*
+.one-to-one {
+    span {
+        &:inner {
+            background-size: 100% 100%;
         }
-
     }
 }
+.portrait {
+    span {
+        &:inner {
+            background-size: 100% auto;
+        }
+    }
+}
+.landscape {
+    span {
+        &:inner {
+            background-size: auto 100%;
+        }
+    }
+}
+*/
+
 
 /* ===============================
    13. DIVIDER WIDGET
    =============================== */
 
-.widget {
-    &.line {
-        padding: 20px 0;
-    }
-}
-
-hr {
-    &.line {
-        background-color: lighten(@color-swatch5,15%);
-        height: 2px;
-        width: 100%;
-        border: none;
-        &:align-left {
-            margin: 20px auto 20px 0px;
-        }
-        &:align-center {
-            margin: 20px auto;
-        }
-        &:align-right {
-            margin: 20px 0px 20px auto;
-        }
-    }
+.line {
+	// No need to style, element around a hr will do what a hr does
+	hr {
+		
+	}
 }
 
 /* ===============================
    14. REDIRECT WIDGET
    =============================== */
 
-.widget {
-    &.redirecttodesktop {
-        padding: 8px 0;
-
-        a {
-            padding-right: 30px;
-            padding-top: 2px;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAQAAADsge97AAABEUlEQVR4Aa2TUbGFMAxEkYAEJFRCJSChEpAQB0hAAhKQUAlIqITzZpibuZm94e9t/prZSXq2nf5JFDYmqRljiSe/bYDOHE4LHRhsua1y4xqUz+nKwNX99DvnRNWYMFQ7s9s2BpkuMt2szyQ6Kr+Lken0FQ90zkIEEnVEJHuYs0a+commJBsA5wNfa+ECBjXLzbiYknICluV2fDhVMcT0LNqU5sEsC0rPaQ3FT/PFtUdnkWclIaxpop3yXXJHNZJJYK9P2VfR9bn0KXsZeHrMNIf18nHkd+0Pvw5cj/0Ijy2N21C2neK317hjqJ1KEzT16dxUtb19V/meYpOZmmL3Oe82TXFg2lebEkUJ5jat+tb5AxQDseDiJM0iAAAAAElFTkSuQmCC);
-            background-repeat: no-repeat;
-            background-position: right center;
-            text-decoration: none;
-            cursor: pointer;
-            .p-font;
-            &:hover,
-            &:active {
-                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAQAAADsge97AAABEUlEQVR4Aa2TUbGFMAxEkYAEJFRCJSChEpAQB0hAAhKQUAlIqITzZpibuZm94e9t/prZSXq2nf5JFDYmqRljiSe/bYDOHE4LHRhsua1y4xqUz+nKwNX99DvnRNWYMFQ7s9s2BpkuMt2szyQ6Kr+Lken0FQ90zkIEEnVEJHuYs0a+commJBsA5wNfa+ECBjXLzbiYknICluV2fDhVMcT0LNqU5sEsC0rPaQ3FT/PFtUdnkWclIaxpop3yXXJHNZJJYK9P2VfR9bn0KXsZeHrMNIf18nHkd+0Pvw5cj/0Ijy2N21C2neK317hjqJ1KEzT16dxUtb19V/meYpOZmmL3Oe82TXFg2lebEkUJ5jat+tb5AxQDseDiJM0iAAAAAElFTkSuQmCC);
-                background-repeat: no-repeat;
-                background-position: right center;
-                cursor: pointer;
-                text-decoration: underline;
-            }
-        }
-    }
+.redirecttodesktop {
+	// What is this?
 }
 
 
@@ -908,45 +212,13 @@ hr {
    15. TWITTER WIDGET
    =============================== */
 
-.widget {
-    &.twitter {
-        padding: 0;
-        ul {
-            padding: 0;
-            margin: 0;
-            li {
-                list-style: none;
-                padding-bottom: 30px;
-                a {
-                    font-family: @font-swatch4-font-family;
-                    font-size: @font-swatch4-font-size;
-                    font-weight: @font-swatch4-font-weight;
-                    line-height: @font-swatch4-line-height;
-                    color: @font-swatch4-color;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                span {
-                    /* Styles for Tweet type link */
-                    a {
-                        .p-font;
-                        text-decoration: underline;
-                    }
-                }
-                time {
-                    color: lighten(@font-swatch5-color,10%);
-                }
-            }
-        }
-        .twitter-profile-pic {
-            float: left;
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
-
-    }
+.twitter {
+	ul {
+		padding-left: 0;
+	}
+	li {
+		list-style: none;
+	}
 }
 
 
@@ -954,126 +226,67 @@ hr {
    16. CONTACT FORM WIDGET
    =============================== */
 
-.widget {
-    &.contactform {
+form {
+	
+}
+input, textarea {
+	outline: none;
+	text-shadow: none;
+	-webkit-appearance: none;
+	border: 1px solid @form-text-field-border;
+	padding: 5px;
+	font-size: inherit;
+	&:focus {
+		border-color: darken(@form-text-field-border, 10%);
+	}
+}
 
-        fieldset {
-            border: none;
-            padding: 0;
-            margin: 2em 0;
+		input:focus::-webkit-input-placeholder {
+			color: lighten(@text-body, 40%);
+		}
+		input:focus:-moz-placeholder {
+			color: lighten(@text-body, 40%);
+		}
+		input:focus::-moz-placeholder {
+			color: lighten(@text-body, 40%);
+		}
+		input:focus:-ms-input-placeholder {
+			color: lighten(@text-body, 40%);
+		}	
 
-            label {
-                width: 100%;
-                float: left;
-                font-family: @font-swatch4-font-family;
-                font-size: @font-swatch4-font-size;
-                font-weight: @font-swatch4-font-weight;
-                line-height: @font-swatch4-line-height;
-                color: @font-swatch4-color;
-                letter-spacing: @font-swatch4-letter-spacing;
-            }
 
-            input {
-                height: 40px;
-                width: 100%;
-                padding: 0;
-                .p-font;
-                text-indent: 8px;
-                margin-top: 6px;
-                margin-bottom: 30px;
-            }
-
-            textarea {
-                height: 100px;
-                width: 100%;
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                color: @font-swatch5-color;
-                text-indent: 8px;
-                padding: 14px 0px 0px 0px;
-                margin-top: 6px;
-                margin-bottom: 20px;
-                resize: none;
-            }
-
-            button {
-                &.btn {
-                    padding: 8px 14px;
-                    margin: 0;
-                    border: 0;
-                    background-color: @font-swatch7-background-color;
-                    font-family: @font-swatch7-font-family;
-                    font-size: @font-swatch7-font-size;
-                    font-weight: @font-swatch7-font-weight;
-                    line-height: @font-swatch7-line-height;
-                    color:@font-swatch7-color;
-                    letter-spacing: @font-swatch7-letter-spacing;
-                    text-decoration: none;
-                    &:hover {
-                        background-color: @font-swatch7-background-color-hover;
-                        cursor: pointer;
-                    }
-
-                    /* ALIGNMENTS */
-
-                    &.justifyleft {
-                        text-align: left;
-                    }
-                    &.justifycenter {
-                        text-align: center;
-                    }
-                    &.justifyright {
-                        text-align: right;
-                    }
-                    &.justifyfull {
-                        text-align: justify;
-                    }
-
-                    /* FONT STYLES */
-
-                    &.justifyitalic {
-                        font-style: italic;
-                    }
-                    &.justifybold {
-                        font-weight: bold;
-                    }
-
-                }
-            }
+.contactform {
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(red(@color-swatch1), green(@color-swatch1), blue(@color-swatch1), 0.3);
+        background-repeat:no-repeat;
+        background-position:center center;
+        text-align: center;
+        background-image: url(data:image/gif;base64,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);
+        .message-text {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            font-weight: @font-swatch5-font-weight;
+            line-height: @font-swatch5-line-height;
+            color: @font-swatch5-color;
+            letter-spacing: @font-swatch5-letter-spacing;
         }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(red(@color-swatch1), green(@color-swatch1), blue(@color-swatch1), 0.3);
-            background-repeat:no-repeat;
-            background-position:center center;
-            text-align: center;
-            background-image: url(data:image/gif;base64,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);
-            .message-text {
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                font-weight: @font-swatch5-font-weight;
-                line-height: @font-swatch5-line-height;
-                color: @font-swatch5-color;
-                letter-spacing: @font-swatch5-letter-spacing;
-            }
-            &.fail,
-            &.success {
-                background: transparent;
-                position: static;
-                top:auto;
-                right:auto;
-                left:auto;
-                bottom:auto;
-                text-align: inherit;
-                .message-box {
-                    display:block;
-                    vertical-align: baseline;
-                }
+        &.fail,
+        &.success {
+            background: transparent;
+            position: static;
+            top:auto;
+            right:auto;
+            left:auto;
+            bottom:auto;
+            text-align: inherit;
+            .message-box {
+                display:block;
+                vertical-align: baseline;
             }
         }
     }
@@ -1142,7 +355,6 @@ hr {
         }
 
         .file-name {
-            .p-font;
             margin-left: 5px;
         }
 
@@ -1191,7 +403,6 @@ hr {
 .widget {
     &.socialicons {
         margin: 1em 0;
-        .p-font;
         a {
             text-decoration: none;
             text-indent: -9999px;
@@ -1400,7 +611,6 @@ hr {
     &.profile {
         span {
             display: block;
-            .p-font;
         }
     }
 }
@@ -1411,8 +621,6 @@ hr {
     &.profile {
         .bk-profile-socialicons {
             margin: 1em 0;
-            .p-font;
-
             a {
                 text-decoration: none;
                 text-indent: -9999px;
@@ -1500,7 +708,6 @@ footer {
                     min-width: 160px;
                     background-color: darken(@color-swatch4,3%);
                     border: none;
-                    .p-font;
                     text-indent: 10px;
                     &:focus {
                         outline: none;
@@ -1600,7 +807,6 @@ footer {
             input {
                 height: 45px;
                 width: 42%;
-                .p-font;
                 text-indent: 12px;
                 &:focus {
                     outline: none;
@@ -1900,3 +1106,23 @@ footer {
         }
     }
 }
+
+// All the imports
+@import "reset.less";
+@import "colours.less";
+@import "grid/grid.less";
+//@import "grid/breakpoints.less";
+@import "blog.less";
+@import "navigation.less";
+@import "typography.less";
+@import "media.less";
+@import "menu.less";
+@import "widgets/alignment.less";
+@import "widgets/buttons.less";
+@import "widgets/twitter.less";
+@import "widgets/slideshow.less";
+@import "widgets/embeds.less";
+@import "widgets/gallery.less";
+@import "widgets/forms.less";
+@import "widgets/columns.less";
+@import "widgets/feature.less";

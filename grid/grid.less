@@ -1,0 +1,118 @@
+/*!
+ * Name: Flynn
+ * Author: David Darnes
+ * Author url: http://david.darn.es
+ * Tools: Made in Coda, Codekit & Less
+ * About: 12 column grid with responsive options, 960px base with large desktop, tablet and mobile views.
+ *
+ * Based on Tyler Tate's 1kb Grid http://www.usabilitypost.com/2009/05/29/the-1kb-css-grid-part-1/
+ * &
+ * Twitter Bootstrap http://twitter.github.com/bootstrap/
+ */
+
+
+// Base variables for fixed grid columns and gutters, comment this out when using a fluid grid
+
+/*
+@column: 60px; // The column width
+@gutter: 20px; // The gutter width
+*/
+
+// Base variables for fluid grid columns and gutters and a max container width, comment this out when using a fixed grid
+
+@column: 7%; // The column width
+@gutter: 1.33%; // The gutter width
+
+.container { // The maximum size of your fluid grid
+	max-width: 1600px;
+}
+
+
+.grid( @column, @gutter ) {
+	.span-1 {  width:@column; }
+	.span-2 {  width:@column * 2  + @gutter; }
+	.span-3 {  width:@column * 3  + @gutter * 2; }
+	.span-4 {  width:@column * 4  + @gutter * 3; }
+	.span-5 {  width:@column * 5  + @gutter * 4; }
+	.span-6 {  width:@column * 6  + @gutter * 5; }
+	.span-7 {  width:@column * 7  + @gutter * 6; }
+	.span-8 {  width:@column * 8  + @gutter * 7; }
+	.span-9 {  width:@column * 9  + @gutter * 8; }
+	.span-10 { width:@column * 10 + @gutter * 9; }
+	.span-11 { width:@column * 11 + @gutter * 10; }
+	.span-12, .container { width:@column * 12 + @gutter * 11; }
+
+	[class*="span-"] {
+		&.shift-1 {  margin-left:@column + @gutter * 2; }
+		&.shift-2 {  margin-left:@column * 2  + @gutter * 3; }
+		&.shift-3 {  margin-left:@column * 3  + @gutter * 4; }
+		&.shift-4 {  margin-left:@column * 4  + @gutter * 5; }
+		&.shift-5 {  margin-left:@column * 5  + @gutter * 6; }
+		&.shift-6 {  margin-left:@column * 6  + @gutter * 7; }
+		&.shift-7 {  margin-left:@column * 7  + @gutter * 8; }
+		&.shift-8 {  margin-left:@column * 8  + @gutter * 9; }
+		&.shift-9 {  margin-left:@column * 9  + @gutter * 10; }
+		&.shift-10 { margin-left:@column * 10 + @gutter * 11; }
+		&.shift-11 { margin-left:@column * 11 + @gutter * 12; }
+	}
+}
+
+.grid( @column, @gutter );
+
+[class*="span-"] {
+	margin-left: @gutter;
+	float: left;
+	max-width: 100%;
+}
+
+.container {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+}
+
+.row {
+	margin-left: -@gutter;
+	clear: both;
+	zoom: 1;
+	&:after, &:before {
+		display: table;
+		line-height: 0;
+		content: "";
+		clear: both;
+	}
+}
+
+img { max-width: 100%; height: auto; }
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+
+// IE & Browser Fixes
+[class*="span-"], .container, .row { zoom: 1; }
+
+img { width: auto~"\9"; }
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/* @import "breakpoints.less"; // Breakpoints for varying browser sizes, comment this out when using a fluid grid */
+
+// Base grid mobile, eg the even more popular iPhone
+@media (max-width: 767px) {
+	[class*="span-"] {
+		margin-left: 0; width: 100%;
+		&[class*="shift-"] { margin-left: 0; }
+	}
+
+	.row { margin: 0 @gutter; }
+	.row .row { margin: 0; }
+	.container { width: 100%; }
+}
