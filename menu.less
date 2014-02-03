@@ -1,0 +1,112 @@
+/* ===============================
+   28. MENU SECTIONS
+   =============================== */
+
+.widget {
+    &.menusections {
+        margin: 1em auto; 
+        ul {
+            padding: 1em 0;
+            margin: 0 auto;
+            max-width: 960px;
+            list-style: none;
+            li {
+                display: inline-block;
+                margin: 0 1em;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }    
+    }
+}
+
+/* ===============================
+   29. MENU STYLES
+   =============================== */
+
+.widget {
+    &.menu {
+        .main {
+            padding: 0;
+        }
+        .menu-items {
+            padding-left: 0;
+            li {
+                list-style: none;
+                padding: 1.5em 0;
+            }
+        }
+        .menu-item-image-wrap {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 200px;
+            img {
+                display: none;
+            }
+        }
+        .menu-subsection {
+            border: 1px solid fade(@color-swatch5, 25%);
+            padding: 4%;
+            margin: 1.5em 0;
+            li { 
+                list-style: none;
+            }
+        }
+        .menu-section-item-dietary-props, .menu-info {
+            .dietary-icon {
+                background-color: fade(@color-swatch5, 25%);
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                border: 0;
+                margin: 5px 5px 0 0;
+                text-align: center;
+            }
+            .vegetarian-icon {
+                &:before { 
+                    content: "veggie";
+                }
+            }
+            .vegan-icon {
+                &:before { 
+                    content: "vegan";
+                }
+            }
+            .glutenfree-icon {
+                &:before { 
+                    content: "gf";
+                }
+            }
+            .nutfree-icon {
+                &:before { 
+                    content: "nf";
+                }
+            }
+            .dairyfree-icon {
+                &:before { 
+                    content: "df";
+                }
+            }
+            .medium-spicy-icon {
+                &:before { 
+                    content: "medium";
+                }
+            }
+            .hot-icon {
+                &:before { 
+                    content: "hot";
+                }
+            }
+            .spicy-icon {
+                &:before { 
+                    content: "mild";
+                }
+            }
+            .not-spicy-icon {
+                display: none;
+            }
+        }
+    }
+}

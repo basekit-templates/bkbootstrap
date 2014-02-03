@@ -1,0 +1,51 @@
+
+.extendednavigation {
+	ul {
+		padding: 0;
+		list-style: none;
+		ul {
+			position: absolute;
+			z-index: 1;
+			
+			display: none;
+		}
+	}
+	li {
+		display: inline-block;
+		position: relative;
+		li {
+			display: list-item;
+		}
+	}
+	ul li:hover {
+		ul {
+			display: block;
+		}
+	}
+	.folder {
+		color: @text-links;
+		position: relative;
+		padding-right: 15px;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			border: 3px solid transparent;
+			border-top-color: @text-body;
+			top: 45%;
+			right: 5%;
+		}
+	}
+	.pull {
+		position: relative;
+		float: right;
+		
+		display: none;
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: "\2630";
+		}
+	}
+}

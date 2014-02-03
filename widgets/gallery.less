@@ -1,0 +1,28 @@
+/* ===============================
+   12. GALLERY WIDGET
+   =============================== */
+
+.gallery {
+	ul {
+	  float: left;
+      padding: 0;
+      list-style: none;
+	  margin-left: -1%;
+	}
+  	li {
+  		text-align: center;
+	  	float: left;
+        margin-left: 1%;
+        width: 24%;
+		&:after, &:before {
+			display: table;
+		}
+    }
+	.inner {
+		display: block;
+  		min-height: 300px;
+	    background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
