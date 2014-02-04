@@ -3,8 +3,6 @@ bkbootstrap
 
 #Potential Changes to Bootstrap
 
-See my comments in the bootstrap file. Here are my proposed changes.
-
 - We split the CSS up into partials. Easier to maintain and read.
 
 ```
