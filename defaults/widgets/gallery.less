@@ -1,39 +1,132 @@
 // Gallery Section
 // ===============
-.gallery {
-	ul {
-	  float: left;
-      padding: 0;
-      list-style: none;
-	  margin-left: -1%;
-	}
-  	li {
-  		text-align: center;
-	  	float: left;
-        margin-left: 1%;
-        width: 24%;
-		&:after, &:before {
-			display: table;
-		}
+.widget {
+    &.gallery {
+        width: 101.2%;
+        margin-left: -0.5%;
+		position: relative;
+        ul {
+        	position: relative;
+        	width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0; 
+            list-style: none;
+            *zoom: 1;
+
+            &:before,
+            &:after {
+                content: "";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+
+            li {
+                float: left;
+                position: relative;
+                width: 33.3%;
+                padding-bottom: 33%;
+                @media @mobile {
+                    width: 100%;
+                    padding-bottom: 100%;
+                }
+
+                span {
+                    &.inner {
+                        background-position:center center;
+                        background-repeat:no-repeat;
+                        background-color: @color-swatch1;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        position: absolute;
+                        left: 5px;
+                        right: 5px;
+                        top: 0px;
+                        bottom: 16px;
+                        overflow: hidden;
+                        img {
+                            display: none;
+                        }
+                        .title,
+                        .description {
+                            position: absolute;
+                            bottom: 0px;
+                            left: 0px;
+                            right: 0px;
+                            margin-bottom: -50px;
+                            background:@color-swatch1;
+                            background: rgba(0, 0, 0, 0.5);
+                            padding: 10px;
+                            text-align: center;
+                            -webkit-transition: all 0.3s ease-out;
+                            -moz-transition: all 0.3s ease-out;
+                            -o-transition: all 0.3s ease-out;
+                            transition: all 0.3s ease-out;
+                            font-family: @font-swatch5-font-family;
+                            font-size: @font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height: @font-swatch5-line-height;
+                            color: @color-swatch1;
+                            letter-spacing: @font-swatch5-letter-spacing;
+                        }
+                        .title {
+                            margin-bottom: 0;
+                        }
+                        .description {
+                            display: none;
+                        }
+
+                        a {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                &.one-to-one {
+                    span {
+                        &:inner {
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+                &.portrait {
+                    span {
+                        &:inner {
+                            background-size: 100% auto;
+                        }
+                    }
+                }
+                &.landscape {
+                    span {
+                        &:inner {
+                            background-size: auto 100%;
+                        }
+                    }
+                }
+            }
+        }
+
     }
-	.inner {
-		display: block;
-  		min-height: 300px;
-	    background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-	}
 }
 
-@media only screen and (max-width : 650px) and (min-width : 481px) {
+@media @mobile {
     /* Tablet view: 2 tiles */
-	.gallery {
-		ul {
-			margin-left: -1%;
-			li {
-				width: 48%;
-				margin-left: 1%;
-			}
-		}
-	}
+    .widget {
+        &.gallery {
+            ul {
+                li {
+                    width: 49%;
+                    padding-bottom: 50%;
+                }
+            }
+        }
+    }
 }

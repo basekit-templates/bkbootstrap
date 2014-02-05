@@ -1,53 +1,171 @@
-// Navigation Styles
-// =================
+/* ===============================
+   6. EXTENDED NAVIGATION
+   =============================== */
 
-.extendednavigation {
-	ul {
-		padding: 0;
-		list-style: none;
-		ul {
-			position: absolute;
-			z-index: 1;
-			
-			display: none;
-		}
-	}
-	li {
-		display: inline-block;
-		position: relative;
-		li {
-			display: list-item;
-		}
-	}
-	ul li:hover {
-		ul {
-			display: block;
-		}
-	}
-	.folder {
-		color: @text-links;
-		position: relative;
-		padding-right: 15px;
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			border: 3px solid transparent;
-			border-top-color: @text-body;
-			top: 45%;
-			right: 5%;
-		}
-	}
-	.pull {
-		position: relative;
-		float: right;
-		
-		display: none;
-		&:after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			content: "\2630";
-		}
-	}
+.widget {
+    .extendednavigation {
+        li {
+        	> .text {
+	        	padding: 0 20px;
+        	}
+            ul {
+                display: none;
+            }
+        }
+
+        ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+            @media @tablet {
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
+                width: 100%;
+                padding-top: 40px;
+            }
+
+            /* ALIGN CENTER */
+
+            &.align-center {
+                li {
+                    text-align: center;
+                    &:hover {
+                        li {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            /* ALIGN LEFT */
+
+            &.align-left {
+                li {
+                    text-align: left;
+                    &:hover {
+                        li {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            /* ALIGN RIGHT */
+
+            &.align-right {
+                li {
+                    text-align: right;
+                    &:hover {
+                        li {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            li {
+                float: left;
+                display: block;
+                @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px solid @color-swatch2;
+                }
+                &:hover {
+                    ul {
+                        display: block;
+                        position: absolute;
+						background: @color-swatch1;
+                        z-index: 500;
+                        padding: 0;
+                        margin: 0 0 0;
+                        @media @tablet {
+                            margin: 16px 0 0;
+                        }
+                        li {
+                            display: block;
+                            width: 100%;
+                                .box-sizing {
+                                    a {
+                                        display: block;
+                                        color: @color-swatch5;
+                                        padding: 0;
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0 20px;
+                    font-family: @font-swatch6-font-family;
+                    font-size: @font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch6-color;
+                    line-height: @font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    :hover {
+                        color: @font-swatch6-color-hover;
+                        text-decoration: none;
+                    }
+                }
+
+                &.folder {
+                	position: relative;
+                	margin-right: 10px;
+                	&:after {
+	                	display: block;
+	                	content: "";
+	                	position: absolute;
+	                	right: 5px;
+	                	top: 43%;
+	                	border: 5px solid transparent;
+	                	border-top-color: @color-swatch6;
+                	}
+                    /* Folder dropdown arrow BG style goes Here */  
+                    cursor: pointer;
+                    .text {
+                        display: block;
+                        font-family: @font-swatch6-font-family;
+                        font-size: @font-swatch6-font-size;
+                        font-weight: @font-swatch6-font-weight;
+                        color: @font-swatch6-color;
+                        line-height: @font-swatch6-line-height;
+                        letter-spacing: @font-swatch6-letter-spacing;
+                        position: relative;
+                        &:hover {
+                            color: @font-swatch6-color-hover;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        a {
+            &.pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    width: 36px;
+                    height: 40px;
+                    position: absolute;
+                    top: 0;
+                    width: 40px;
+					right: 0;
+                    &:after {
+                        content:"";
+                        width: 20px;
+                        height: 4px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
 }

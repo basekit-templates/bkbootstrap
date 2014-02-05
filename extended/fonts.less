@@ -15,7 +15,7 @@ body {
 a {
     color: @color-swatch3;
     text-decoration: none;
-        &:hover {
+    &:hover {
         text-decoration: underline;
     }
 }
@@ -55,14 +55,45 @@ h4 {
     color: @font-swatch4-color;
     letter-spacing: @font-swatch4-letter-spacing;
 }
-
-p, .p-font {
+p, ul, ol, li {
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
     line-height: @font-swatch5-line-height;
     color: @font-swatch5-color;
     letter-spacing: @font-swatch5-letter-spacing;
+}
+.extendednavigation a {
+    font-family: @font-swatch6-font-family;
+    font-size: @font-swatch6-font-size;
+    font-weight: @font-swatch6-font-weight;
+    line-height: @font-swatch6-line-height;
+    color: @font-swatch6-color;
+    letter-spacing: @font-swatch6-letter-spacing;
+}
+small {
+	font-family: inherit;
+}
+blockquote {
+  background: lighten(@color-swatch5,20%);
+  margin:0;
+  padding: 20px;
+  quotes:"\201C""\201D""\2018""\2019";
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+}
+
+blockquote:before {
+  font-family: @font-swatch5-font-family;
+  color: @font-swatch5-color;
+  content:open-quote;
+  font-size: @font-swatch5-font-size;
+  line-height: @font-swatch5-line-height;
+  margin-right:.1em;
+  vertical-align:-.4em;
 }
 
 /* COMPANY NAME */
