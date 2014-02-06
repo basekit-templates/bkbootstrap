@@ -10,6 +10,7 @@
 	}
 	button {
 		cursor: pointer;
+		line-height: @font-swatch4-line-height;
 		&:focus {
 			outline: none;
 		}
@@ -22,10 +23,11 @@
 
 // Just general form styles
 input, textarea {
+	width: 100%;
 	outline: none;
 	text-shadow: none;
 	-webkit-appearance: none;
-	border: 1px solid @form-text-field-border;
+	border: 1px solid @color-swatch5;
 	padding: 5px;
 	font-size: inherit;
 	font-family: inherit;
@@ -35,22 +37,19 @@ input, textarea {
 	}
 }
 input:focus::-webkit-input-placeholder {
-	color: lighten(@text-body, 40%);
+	color: lighten(@color-swatch5, 40%);
 }
 input:focus:-moz-placeholder {
-	color: lighten(@text-body, 40%);
+	color: lighten(@color-swatch5, 40%);
 }
 input:focus::-moz-placeholder {
-	color: lighten(@text-body, 40%);
+	color: lighten(@color-swatch5, 40%);
 }
 input:focus:-ms-input-placeholder {
-	color: lighten(@text-body, 40%);
+	color: lighten(@color-swatch5, 40%);
 }
 
-// Need to wrap label and matching field into their own divs, easier to produce a clean layout
-
 .contactform {
-	// Want to see this in action
     .overlay {
         position: fixed;
         top: 0;
@@ -71,6 +70,49 @@ input:focus:-ms-input-placeholder {
         bottom: auto;
         .message-box {
             display:block;
+        }
+    }
+}
+
+
+/* ===============================
+   23. SIGNUP FORM WIDGET
+   =============================== */
+
+.signupform {
+    padding: 0;
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        label {
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input {
+            height: 45px;
+            width: 42%;
+            .p-font;
+            &:focus {
+                outline: none;
+            }
+        }
+        input[type=submit] {
+            height: 45px;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 0;
+            border: 0;
+            text-decoration: none;
+            text-decoration: none;
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+            }
         }
     }
 }
