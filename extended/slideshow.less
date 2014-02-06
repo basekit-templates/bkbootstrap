@@ -1,0 +1,48 @@
+.slideshow-widget {
+	.btn-prev, .btn-next {
+		&:after {
+			text-indent: 0;
+			left: 0;
+			position: absolute;
+			top: 0;
+			font-size: 18px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.btn-next {
+		&:after {
+			content: "\2192";
+		}
+	}
+	.btn-prev {
+		&:after {
+			content: "\2190";
+		}
+	}
+	.btn-play {
+		&:after {
+			content: "||";
+			text-indent: 0;
+			font-size: 34px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			font-weight: bold;
+			line-height: 62px;
+		}
+	}
+	.btn-play.pause {
+		&:after {
+			content: "\25BA";
+			line-height: 60px;
+		}
+	}
+	&:hover {
+		span.btn-play {
+			display: block;
+		}
+	}
+}
