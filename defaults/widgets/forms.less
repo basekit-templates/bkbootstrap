@@ -1,27 +1,7 @@
-/* ===============================
-   23. SIGNUP FORM WIDGET
-   =============================== */
+//===================
+// Form Widget Styles
+//===================
 
-.signupform {
-	input {
-		&:focus {
-			outline: none;
-		}
-	}
-	button {
-		cursor: pointer;
-		line-height: @font-swatch4-line-height;
-		&:focus {
-			outline: none;
-		}
-	}
-}
-
-/* ===============================
-   16. CONTACT FORM WIDGET
-   =============================== */
-
-// Just general form styles
 input, textarea {
 	width: 100%;
 	outline: none;
@@ -49,6 +29,11 @@ input:focus:-ms-input-placeholder {
 	color: lighten(@color-swatch5, 40%);
 }
 
+
+//====================
+// Contact Form Widget
+//====================
+
 .contactform {
     .overlay {
         position: fixed;
@@ -75,12 +60,24 @@ input:focus:-ms-input-placeholder {
 }
 
 
-/* ===============================
-   23. SIGNUP FORM WIDGET
-   =============================== */
+//==============
+// Singup Widget
+//==============
 
 .signupform {
     padding: 0;
+	input {
+		&:focus {
+			outline: none;
+		}
+	}
+	button {
+		cursor: pointer;
+		line-height: @font-swatch4-line-height;
+		&:focus {
+			outline: none;
+		}
+	}
     fieldset {
         padding: 0;
         border: 0;
