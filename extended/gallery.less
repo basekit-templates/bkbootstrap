@@ -1,3 +1,24 @@
 //===============
 // Gallery Widget
 //===============
+
+.gallery {
+	ul {
+		li {
+			span {
+				&.inner {
+					background-color: @color-swatch1;
+					.title, .description {
+						background:@color-swatch1;
+						font-family: @font-swatch5-font-family;
+						font-size: @font-swatch5-font-size;
+						font-weight: @font-swatch5-font-weight;
+						line-height: @font-swatch5-line-height;
+						color: @color-swatch1;
+						letter-spacing: @font-swatch5-letter-spacing;
+					}
+				}
+			}
+		}
+	}
+}
