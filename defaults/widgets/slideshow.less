@@ -108,3 +108,149 @@
         }
     }
 }
+
+//=====================
+// Responsive Slideshow
+//=====================
+
+.slideshow-widget {
+    position: relative;
+}
+
+/** slideshow widget **/
+.widget.responsiveslideshow .slideshow-widget-wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+/** slideshow widget **/
+.widget.profile {
+  min-height: 28px;
+}
+
+/* Temporary, this will be set in the template. */
+.widget.responsiveslideshow .slideshow-image-list {
+    height: 400px;
+}
+
+.widget.responsiveslideshow .slideshow-image-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.widget.responsiveslideshow .slideshow-image-list.crop span.inner {
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.widget.responsiveslideshow li.slideshow-image-item,
+.widget.responsiveslideshow span.inner,
+.widget.responsiveslideshow .image-wrapper,
+.widget.responsiveslideshow .content-wrapper,
+.widget.responsiveslideshow .slideshow-image-item {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.widget.responsiveslideshow .slideshow-image-item {
+    display: none;
+}
+
+.widget.responsiveslideshow .slideshow-image-item.current {
+    display: block;
+}
+
+.widget.responsiveslideshow .slideshow-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.widget.responsiveslideshow .slideshow-image-list.crop span.inner.square,
+.widget.responsiveslideshow .slideshow-image-list.crop span.inner.portrait,
+.widget.responsiveslideshow .slideshow-image-list.crop span.inner.landscape {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.widget.responsiveslideshow .slideshow-image-list.crop span.inner img {
+    display:none;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev,
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+    position: absolute;
+    width: 14%;
+    height: 14%;
+    top: 43%;
+    display: block;
+    cursor: pointer;
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls {
+  text-align: center;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev {
+  z-index:11;
+  left: 10px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+  z-index:12;
+  right: 10px;
+}
+
+.widget.responsiveslideshow .slideshow-empty {
+    padding: 10px;
+}
+
+.widget.responsiveslideshow .btn-play {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  width: 14%;
+  height: 22%;
+  top: 39%;
+  left: 43%;
+}
+
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play {
+  display:block;
+}
+
+.widget.responsiveslideshow .dot {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    display: inline-block;
+    border:1px solid #000000;
+    background-color:#ffffff;
+}
+
+.widget.responsiveslideshow .btn-prev.disabled,
+.widget.responsiveslideshow .btn-next.disabled,
+.widget.responsiveslideshow .btn-play.disabled
+{
+  opacity:0.4;
+  cursor: default;
+}
+
