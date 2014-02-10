@@ -1,8 +1,74 @@
 //=================
-// Slideshow Widget
+// Responsive Slideshow Widget
 //=================
 
-.slideshow-widget {
+.responsiveslideshow {
+	.slideshow-widget-wrapper {
+		background-color: lighten(@color-swatch5,20%);
+	}
+	li.slideshow-image-item,
+	span.inner,
+	.image-wrapper,
+	.content-wrapper,
+	.slideshow-image-item {
+	    position: absolute;
+	    left: 0px;
+	    right: 0px;
+	    top: 0px;
+	    bottom: 0px;
+	    overflow: hidden;
+	}
+	.slideshow-image-list {
+	    margin: 0;
+	    padding: 0;
+	    list-style-type: none;
+	    position: relative;
+	    &.crop { 
+	    	span.inner {
+    			background-position:center center;
+    			background-repeat:no-repeat;
+    			img {
+				    display:none;
+				}
+			}
+			span.inner.square,
+			span.inner.portrait,
+			span.inner.landscape {
+			    background-repeat: no-repeat;
+			    background-position: center center;
+			    -webkit-background-size: cover;
+			    -moz-background-size: cover;
+			    -o-background-size: cover;
+			    background-size: cover;
+			}
+		}
+	}
+	.slideshow-image-item {
+    	display: none;
+	}
+	.slideshow-image-item.current {
+		display: block;	
+	}
+	.slideshow-image {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    max-width: 100%;
+	    max-height: 100%;
+	    -webkit-transform: translate(-50%, -50%);
+	    -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	    -o-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	}
+	.title, .description {
+		font-family: @font-swatch5-font-family;
+		font-size: @font-swatch5-font-size;
+		font-weight: @font-swatch5-font-weight;
+		line-height: bkscale(@font-swatch5-line-height, 0.55);
+		color: @color-swatch1;
+		letter-spacing: @font-swatch5-letter-spacing;
+	}
 	.btn-prev, .btn-next {
 		&:after {
 			text-indent: 0;
@@ -49,23 +115,22 @@
 			display: block;
 		}
 	}
-}
-
-
-//============================
-// Responsive Slideshow Widget
-//============================
-
-.responsiveslideshow {
-	.content-wrapper {
-		background-color: lighten(@color-swatch5,20%);
+	&.slideshow-empty {
+	    padding: 10px;
 	}
-	.title, .description {
-		font-family: @font-swatch5-font-family;
-		font-size: @font-swatch5-font-size;
-		font-weight: @font-swatch5-font-weight;
-		line-height: bkscale(@font-swatch5-line-height, 0.55);
-		color: @color-swatch1;
-		letter-spacing: @font-swatch5-letter-spacing;
+	.dot {
+	    width: 14px;
+	    height: 14px;
+	    line-height: 14px;
+	    display: inline-block;
+	    border:1px solid #000000;
+	    background-color:#ffffff;
+	}
+	.btn-prev.disabled,
+	.btn-next.disabled,
+	.btn-play.disabled {
+		opacity:0.4;
+		cursor: default;
 	}
 }
+
