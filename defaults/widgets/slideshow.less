@@ -1,5 +1,5 @@
 //=================
-// Slideshow Widget
+// Responsive Slideshow Widget
 //=================
 
 .widget {
@@ -9,6 +9,12 @@
         }
         min-height: 300px;
         .slideshow-image-list {
+            .slideshow-image-item {
+                display:none;
+                &.current {
+                    display:list-item;
+                }
+            }
         }
         span {
             &.inner {
@@ -34,9 +40,9 @@
             top: auto;
         }
         .slideshow-image-list {
-            height: 450px;
+            min-height: 450px;
                 @media @tablet {
-                    height: 350px;
+                    min-height: 350px;
                 }
         }
         .title,
@@ -50,25 +56,24 @@
             }
         }
         .description {
-            padding: 6px 20px;
-                @media @mobile {
-                    display: none;
-                }
+            @media @mobile {
+                display: none;
+            }
         }
         .slideshow-widget {
             .btn-prev, .btn-next {
                 position: absolute;
-                width: 14%;
-                height: 14%;
                 top: 43%;
                 display: block;
                 cursor: pointer;
             }
             .btn-prev {
+                z-index: 11;
                 left: 10px;
                 background: #ddd;
             }
             .btn-next {
+                z-index: 11;
                 right: 10px;
                 background: #ddd;
             }
@@ -79,7 +84,7 @@
                 
                 position: absolute;
 				cursor: pointer;
-				z-index: 10;
+				z-index: 12;
 				width: 6%;
 				height: 60px;
 				top: 39%;
