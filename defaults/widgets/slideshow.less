@@ -4,6 +4,9 @@
 
 .widget {
     &.responsiveslideshow {
+        .slideshow-widget {
+            position:relative;
+        }
         min-height: 300px;
         .slideshow-image-list {
         }
@@ -20,7 +23,7 @@
         }
         .crop {
             .image-wrapper {
-                padding: 0
+                padding: 0;
             }
         }
         .content-wrapper {
@@ -54,11 +57,12 @@
         }
         .slideshow-widget {
             .btn-prev, .btn-next {
-                font-size: 0;
-                z-index: 11;
-                text-indent: -99999px;
-                width: 40px;
-                height: 40px;
+                position: absolute;
+                width: 14%;
+                height: 14%;
+                top: 43%;
+                display: block;
+                cursor: pointer;
             }
             .btn-prev {
                 left: 10px;

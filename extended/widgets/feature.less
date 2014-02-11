@@ -4,8 +4,31 @@
 
 .widget {
 	&.feature {
+		display: table;
+		position:relative;
+		width:100%;
+		overflow: hidden;
+		height: auto;
 		.feature-bgimg {
+			display: table-row;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			min-height: 100px; /* height should be in the media query */
 			.content {
+				min-height: 200px; /* height should be in the media query*/
+				display: table-cell;
+				vertical-align: middle;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				.spare {
+  					display: block;
+				}
 				h2 {
 					font-family: @font-swatch8-font-family;
 					font-size: @font-swatch8-font-size;
