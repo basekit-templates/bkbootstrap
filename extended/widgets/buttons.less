@@ -30,7 +30,15 @@
 }
 
 .widget {
+    &.button,
+    &.clicktocall {
+        .clearfix;
+    } 
+}
+
+.widget {
     &.tweet { 
+        .clearfix;
         padding: 9px 0;
         a {
             padding: 14px 10px 14px 40px;
@@ -61,6 +69,7 @@
 
 .widget {
     &.dropbox { 
+        .clearfix;
         button {
             padding: 10px 10px 10px 40px;
             margin: 1em 0;
@@ -93,6 +102,7 @@
 
 .widget {
     &.paypalbuynow {
+        .clearfix;
         .widget {
             &.button {
                 &.paypal {
