@@ -118,28 +118,49 @@
                 }
             }
         }
-
         a {
             &.pull {
                 display: none;
                 @media @tablet {
-                    display: block;
-                    width: 36px;
-                    height: 40px;
                     position: absolute;
-                    top: 0;
-                    width: 40px;
                     right: 0;
+                    top: -43px; 
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border: none;
+                    text-indent: -900em;
+                    overflow: hidden;
+                    cursor: pointer;
+                    outline: none;
+                    padding: 0;
                     &:after {
-                        content:"\2630";
-                        color: #999;
-                        width: 20px;
-                        height: 4px;
-                        display: inline-block;
+                        content: '';
                         position: absolute;
-                        right: 0;
+                        width: 26px;
+                        height: 3px;
+                        background: #c7c7c7;
                         top: 0;
+                        right: 0;
+                        box-shadow: 0 6px 0 #c7c7c7, 0 12px 0 #c7c7c7;
                     }
+                    // display: block;
+                    // width: 36px;
+                    // height: 40px;
+                    // position: absolute;
+                    // top: 0;
+                    // width: 40px;
+                    // right: 0;
+                    // &:after {
+                    //     content:"\2630";
+                    //     color: #999;
+                    //     width: 20px;
+                    //     height: 4px;
+                    //     display: inline-block;
+                    //     position: absolute;
+                    //     right: 0;
+                    //     top: 0;
+                    // }
                 }
             }
         }
