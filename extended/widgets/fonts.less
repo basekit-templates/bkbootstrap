@@ -86,14 +86,21 @@ blockquote {
   color:@font-swatch5-color;
 }
 
-blockquote:before {
-  font-family: @font-swatch5-font-family;
-  color: @font-swatch5-color;
-  content:open-quote;
-  font-size: @font-swatch5-font-size;
-  line-height: @font-swatch5-line-height;
-  margin-right:.1em;
-  vertical-align:-.4em;
+blockquote {
+    margin: 30px 0;
+    font-family: @font-swatch5-font-family;
+    font-weight: @font-swatch5-font-weight;
+    color: @font-swatch5-color;
+    line-height: @font-swatch5-line-height;
+    letter-spacing: @font-swatch5-letter-spacing;
+    font-size: @font-swatch5-font-size;
+    &:before {
+        content:open-quote;
+        left: -.1em;
+        top: 22px;
+        font-family: georgia;
+        color: lighten(@color-swatch5,10%);
+    }
 }
 
 /* COMPANY NAME */
