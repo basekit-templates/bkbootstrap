@@ -10,7 +10,7 @@
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 
-@media print, .bk-print {
+.print-mixin {
     * {
         box-shadow: none !important;
         text-shadow: none !important;
@@ -59,4 +59,12 @@
     h3 {
         page-break-after: avoid;
     }
+}
+
+@media print {
+    .print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
 }
