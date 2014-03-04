@@ -43,3 +43,23 @@
 		}
 	}
 }
+
+.widget {
+    &.ecomproduct {
+        .ecom-product-preview-image-wrap,
+        .ecom-product-image-wrap {
+            height:150px;
+            background-position:center center;
+            background-repeat:no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .ecom-product-preview-image,
+        .ecom-product-image {
+            display:none;
+        }
+    }
+}

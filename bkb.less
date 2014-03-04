@@ -1106,11 +1106,17 @@ hr {
 //=============
 
 .ecomproduct {
+    .ecom-product-image-preview-wrap,
     .ecom-product-image-wrap {
         background-repeat: no-repeat;
-        .ecom-product-image {
-            max-width:100%;
-        }
+    }
+    .ecom-product-preview-image,
+    .ecom-product-image {
+        max-width:100%;
+    }
+    .ecom-product-image-list {
+        list-style:none;
+        padding:0;
     }
 }
 //=========================
@@ -2351,6 +2357,26 @@ blockquote {
 			display:none;
 		}
 	}
+}
+
+.widget {
+    &.ecomproduct {
+        .ecom-product-preview-image-wrap,
+        .ecom-product-image-wrap {
+            height:150px;
+            background-position:center center;
+            background-repeat:no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .ecom-product-preview-image,
+        .ecom-product-image {
+            display:none;
+        }
+    }
 }
 //================================
 // Contact And Signup Form Widgets
