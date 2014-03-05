@@ -22,7 +22,7 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('files', function () { 	
+  grunt.registerTask('build', function () { 	
   	var buildStr = recruseImports('basekit-bootstrap.less');
   	grunt.file.write('bkb.less', buildStr);
   });
