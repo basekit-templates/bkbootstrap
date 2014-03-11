@@ -18,13 +18,32 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json'),
+    lesslint:{
+     src: ['bkb-dev.less']
+    },
+    csslint: {
+      options:{
+        csslintrc: 'config/.csslintrc'
+      }
+     }
   });
+
+  grunt.loadNpmTasks('grunt-lesslint')
 
   // Default task(s).
   grunt.registerTask('build', function () { 	
-  	var buildStr = recruseImports('basekit-bootstrap.less');
-  	grunt.file.write('bkb.less', buildStr);
+  	var buildStr = recruseImports('basekit-bootstrap.less'),
+        vars = grunt.file.read('vars.less');
+  	
+    // This is the version that gets linted; includes
+    // all the vars so linting doesn't fall over
+    grunt.file.write('bkb-dev.less', vars+buildStr);
+    
+    // This is the production version of bkb. The
+    // one that will get released with BaseKit
+    grunt.file.write('bkb.less', buildStr);
+        grunt.task.run('lesslint');
   });
 };
 
