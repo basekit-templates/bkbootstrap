@@ -14,6 +14,7 @@
     * {
         box-shadow: none !important;
         text-shadow: none !important;
+        border: none !important;
     }
 
     *:not(.print-bg-override) {
@@ -39,7 +40,11 @@
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
+    
+    input[type=text], input[type=email], input[type=search], .signupform fieldset input[type=email], .widget.profile form fieldset input[type=email], textarea, button {
+		border: 1px solid #000 !important;
+    }
+    
     thead {
         display: table-header-group; /* h5bp.com/t */
     }
