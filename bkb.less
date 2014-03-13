@@ -1915,6 +1915,89 @@ input, textarea {
 }
 
 
+// Print styling
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+.print-mixin {
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border: none !important;
+    }
+
+    *:not(.print-bg-override) {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+    }
+    
+    .print-bg-override {
+        -webkit-print-color-adjust:exact;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    input[type=text], input[type=email], input[type=search], .signupform fieldset input[type=email], .widget.profile form fieldset input[type=email], textarea, button {
+        border: 1px solid #000 !important;
+    }
+    
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@media print {
+    body {
+        background-color:#fff!important;
+        background-image:none!important;
+    }
+    .print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
+     background-color: #fff!important;
+     background-image: none!important;
+}
+
 // Clean styles for fonts and colours
 //============================
 // Extended Styles For Widgets
@@ -3058,96 +3141,34 @@ footer {
 }
 
 
-// Print stylinging
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
+// Print styling
 /* ==========================================================================
    Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
+   Styles to deal with BaseKit related features
    ========================================================================== */
 
-.print-mixin {
-    * {
-        box-shadow: none !important;
-        text-shadow: none !important;
-        border: none !important;
-    }
-
-    *:not(.print-bg-override) {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-    }
-	
-	body {
-		background-color: #fff;
-		background-image: none;
-	}
+.extended-print-mixin {
 	.widget.extendednavigation,
 	.widget.socialicons,
 	.bk-profile-socialicons {
-    	display: none;
-    }
-    .print-bg-override {
-        -webkit-print-color-adjust:exact;
-    }
+	    	display: none;
+	}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    
-    input[type=text], input[type=email], input[type=search], .signupform fieldset input[type=email], .widget.profile form fieldset input[type=email], textarea, button {
-		border: 1px solid #000 !important;
-    }
-    
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-
-   .widget.menusections {
-        display:none;
-    }
-    
-    .widget.menu .main.wrapper {
-        page-break-before:always;
-    }
+	.widget.menusections {
+	        display:none;
+	}
+	    
+	.widget.menu .main.wrapper {
+		page-break-before:always;
+	}
 }
 
 @media print {
     .print-mixin;
+    .extended-print-mixin;
 }
 
 .bk-print {
     .print-mixin;
+    .extended-print-mixin;
 }
