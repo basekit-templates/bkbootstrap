@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Print styles.
+   Styles to deal with BaseKit related features
+   ========================================================================== */
+
+.extended-print-mixin {
+	.widget.extendednavigation,
+	.widget.socialicons,
+	.bk-profile-socialicons {
+	    	display: none;
+	}
+
+	.widget.menusections {
+	        display:none;
+	}
+	    
+	.widget.menu .main.wrapper {
+		page-break-before:always;
+	}
+}
+
+@media print {
+    .print-mixin;
+    .extended-print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
+    .extended-print-mixin;
+}
