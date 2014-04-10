@@ -1,0 +1,46 @@
+//==============================
+// Ecommerce Products List Widget
+//==============================
+
+.widget {
+    &.ecomproductslist {
+        .ecom-productslist-product {
+            display: inline-block;
+            *display: inline;
+            vertical-align: top;
+            width: 31.317641639709474%;
+            margin-left: 0;
+            margin-bottom:15px;
+            padding:10px;
+            zoom: 1;
+            &:nth-child(3n+1) {
+                margin-left:0;
+            }
+            @media @tablet {
+                width: 48%;
+                margin-left:2%;
+                &:nth-child(2n+1) {
+                    margin-left:0;
+                }
+            }
+            @media @mobile {
+                width: 100%;
+                margin-left:0;
+            }
+        }
+        .ecom-productslist-image-wrap {
+            display:block;
+            height:250px;
+            background-position:center center;
+            background-repeat:no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .ecom-productslist-image {
+            display:none;
+        }
+    }
+}

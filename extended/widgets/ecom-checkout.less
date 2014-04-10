@@ -1,0 +1,138 @@
+//==========================
+// Ecommerce Checkout Widget
+//==========================
+
+.widget.ecomcheckout {
+    table {
+        border-spacing: 0;
+        width: 100%;
+        tr {
+            th, td {
+                border-bottom: 1px solid fade(@color-swatch5,50%);
+                padding: 1.5em 0.5em;
+                text-align: left;
+                &:nth-child(1) { /* thumbnail */
+                    width: 11%;
+                    vertical-align: top;
+                    @media @tablet {
+                        width: 15%;
+                    }
+                }
+                &:nth-child(2) { /* product details */
+                    width: 68%;
+                }
+                &:nth-child(3) { /* amount */
+                    text-align: right;
+                    padding: 1.5em 0.5em;
+                }
+            }
+            th {
+                padding: 1.5em 0.5em;
+            }
+            td {
+                .checkout-productname, .checkout-pricepu {
+                    display: block;
+                }
+                .checkout-quantitybtn {
+                    background-color: darken(@color-swatch1,2%);
+                    display: inline-block;
+                    margin: 10px 0 0;
+                    button {
+                        font-family: @font-swatch7-font-family;
+                        color: @font-swatch7-color;
+                        font-size: @font-swatch7-font-size;
+                        font-weight: @font-swatch7-font-weight;
+                        line-height: @font-swatch7-line-height;
+                        background-color: @font-swatch7-background-color;
+                        border: none;
+                        margin: 0;
+                        width: 2em;
+                        height: 2em;
+                        @media @tablet {
+                            width: 56px;
+                            height: 44px;
+                        }
+                        &:hover {
+                            background-color: @font-swatch7-background-color-hover;
+                            cursor: pointer;
+                        }
+                    }
+                    span {
+                        width: 56px;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                }
+            }
+            .image-wrap {
+                width: 56px;
+                height: 56px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                overflow: hidden;
+                float: left;
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .delivery {
+        @media @tablet {
+            width: 100%;
+        }
+        .form-group {
+            span:not(.no-shipping) {
+                display:none;
+            }
+            &.invalid {
+                span:not(.no-shipping) {
+                    display:block;
+                }
+                input {
+                    margin-bottom: 0.5em;
+                    outline: 1px solid red;
+                }
+                span {
+                    color: red;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+        .delivery-title {
+            display: block;
+        }
+        label {
+            width:100%;
+            float: left;
+        }
+        input {
+            margin-bottom: 1em;
+        }
+        select {
+            margin-bottom: 1.5em;
+            -webkit-appearance: menulist;
+        }
+    }
+    .checkout-order-button {
+        padding: 10px;
+        font-family: @font-swatch7-font-family;
+        color: @font-swatch7-color;
+        font-size: @font-swatch7-font-size;
+        font-weight: @font-swatch7-font-weight;
+        line-height: @font-swatch7-line-height;
+        background-color: @font-swatch7-background-color;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
+            cursor: pointer;
+        }
+        &:disabled {
+            display: none;
+        }
+    }
+}
