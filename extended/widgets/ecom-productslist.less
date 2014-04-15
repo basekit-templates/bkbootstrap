@@ -4,28 +4,23 @@
 
 .widget {
     &.ecomproductslist {
+        margin-left: -3%;
         .ecom-productslist-product {
             display: inline-block;
             *display: inline;
+            width: 30.36%;
+            margin-left: 3%;
+            margin-right: -.25em;
+            margin-bottom: 15px;
+            padding: 10px 0;
             vertical-align: top;
-            width: 31.317641639709474%;
-            margin-left: 0;
-            margin-bottom:15px;
-            padding:10px;
             zoom: 1;
-            &:nth-child(3n+1) {
-                margin-left:0;
-            }
             @media @tablet {
-                width: 48%;
-                margin-left:2%;
-                &:nth-child(2n+1) {
-                    margin-left:0;
-                }
+                width: 47%;
             }
             @media @mobile {
                 width: 100%;
-                margin-left:0;
+                margin-left: 0;
             }
         }
         .ecom-productslist-image-wrap {
