@@ -48,13 +48,13 @@
                         margin: 0;
                         width: 2em;
                         height: 2em;
+                        cursor: pointer;
                         @media @tablet {
                             width: 56px;
                             height: 44px;
                         }
                         &:hover {
                             background-color: @font-swatch7-background-color-hover;
-                            cursor: pointer;
                         }
                     }
                     span {
@@ -138,6 +138,7 @@
             cursor: pointer;
         }
         &:disabled {
-            display: none;
+            background-color: fade(@color-swatch3,50%);
         }
     }
+}/* end .widget.ecomcheckout */
