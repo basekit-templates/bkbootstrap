@@ -1,0 +1,35 @@
+//===================================
+// Ecommerce Featured Products Widget
+//===================================
+
+.widget {
+    &.ecomfeaturedproducts {
+        .ecom-featuredproducts-wrap {
+            .ecom-featuredproducts-product {
+                display: inline-block;
+                width: 100%;
+                .ecom-featuredproducts-image-wrap {
+                    width: 55%;
+                    height: 250px;
+                    background-position:top center;
+                    background-repeat:no-repeat;
+                    -webkit-background-size: contain;
+                    -moz-background-size: contain;
+                    -o-background-size: contain;
+                    background-size: contain;
+                    overflow: hidden;
+                    background-color: @color-swatch1;
+                    float: left;
+                }
+                .ecom-featuredproducts-image {
+                    display: none;
+                }
+            }
+            .ecom-featuredproducts-info {
+                width: 41%;
+                display: inline-block;
+                margin-left: 4%;
+            }
+        }
+    }
+}
