@@ -3,165 +3,147 @@
 //===========================
 
 .widget {
-    .extendednavigation {
-        li {
-            > .text {
-                padding: 0 20px;
-            }
-            ul {
-                display: none;
-            }
-        }
+	.extendednavigation {
+		li {
+			> .text {
+				padding: 0 20px;
+			}
+			ul {
+				display: none;
+			}
+		}
 
-        ul {
-            margin: 0;
-            padding: 0;
-            @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
-                /* Then these styles are applied */
-                width: 100%;
-                padding-top: 40px;
-            }
+		ul {
+			margin: 0;
+			padding: 0;
+			@media @tablet {
+				/* Hidden until nav icon is clicked */
+				display: none;
+				/* Then these styles are applied */
+				width: 100%;
+				padding-top: 40px;
+			}
 
-            /* ALIGN CENTER */
+			li {
+				float: left;
+				display: block;
+				@media @tablet {
+					width: 100%;
+					padding: 1em 0;
+				}
+				&:hover {
+					ul {
+						display: block;
+						position: absolute;
+						z-index: 500;
+						padding: 0;
+						margin: 0 0 0;
+						min-width: 140px;
+						@media @tablet {
+							margin: 16px 0 0;
+						}
+						li {
+							display: block;
+							width: 100%;
+								.box-sizing {
+									a {
+										display: block;
+										padding: 0;
+									}
+								}
+						}
+					}
+				}
 
-            &.align-center {
-                li {
-                    text-align: center;
-                    &:hover {
-                        li {
-                            text-align: center;
-                        }
-                    }
-                }
-            }
+				a {
+					display: block;
+					padding: 0 20px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
 
-            /* ALIGN LEFT */
+				&.folder {
+					position: relative;
+					margin-right: 10px;
+					/* Folder dropdown arrow BG style goes Here */	
+					cursor: pointer;
+					.text {
+						display: block;
+						position: relative;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		a {
+			&.pull {
+				display: none;
+				@media @tablet {
+					position: absolute;
+					right: 0;
+					top: -43px; 
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					border: none;
+					text-indent: -900em;
+					overflow: hidden;
+					cursor: pointer;
+					outline: none;
+					padding: 0;
+					&:after {
+						content: '';
+						position: absolute;
+						width: 26px;
+						height: 3px;
+						background: #c7c7c7;
+						top: 0;
+						right: 0;
+						box-shadow: 0 6px 0 #c7c7c7, 0 12px 0 #c7c7c7;
+					}
+					// display: block;
+					// width: 36px;
+					// height: 40px;
+					// position: absolute;
+					// top: 0;
+					// width: 40px;
+					// right: 0;
+					// &:after {
+					//	   content:"\2630";
+					//	   color: #999;
+					//	   width: 20px;
+					//	   height: 4px;
+					//	   display: inline-block;
+					//	   position: absolute;
+					//	   right: 0;
+					//	   top: 0;
+					// }
+				}
+			}
+		}
+	}
+}
 
-            &.align-left {
-                li {
-                    text-align: left;
-                    &:hover {
-                        li {
-                            text-align: left;
-                        }
-                    }
-                }
-            }
-
-            /* ALIGN RIGHT */
-
-            &.align-right {
-                li {
-                    text-align: right;
-                    &:hover {
-                        li {
-                            text-align: right;
-                        }
-                    }
-                }
-            }
-
-            li {
-                float: left;
-                display: block;
-                @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                }
-                &:hover {
-                    ul {
-                        display: block;
-                        position: absolute;
-                        z-index: 500;
-                        padding: 0;
-                        margin: 0 0 0;
-                        min-width: 140px;
-                        @media @tablet {
-                            margin: 16px 0 0;
-                        }
-                        li {
-                            display: block;
-                            width: 100%;
-                                .box-sizing {
-                                    a {
-                                        display: block;
-                                        padding: 0;
-                                    }
-                                }
-                        }
-                    }
-                }
-
-                a {
-                    display: block;
-                    padding: 0 20px;
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-
-                &.folder {
-                    position: relative;
-                    margin-right: 10px;
-                    /* Folder dropdown arrow BG style goes Here */  
-                    cursor: pointer;
-                    .text {
-                        display: block;
-                        position: relative;
-                        &:hover {
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-        a {
-            &.pull {
-                display: none;
-                @media @tablet {
-                    position: absolute;
-                    right: 0;
-                    top: -43px; 
-                    display: inline-block;
-                    width: 40px;
-                    height: 40px;
-                    border: none;
-                    text-indent: -900em;
-                    overflow: hidden;
-                    cursor: pointer;
-                    outline: none;
-                    padding: 0;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        width: 26px;
-                        height: 3px;
-                        background: #c7c7c7;
-                        top: 0;
-                        right: 0;
-                        box-shadow: 0 6px 0 #c7c7c7, 0 12px 0 #c7c7c7;
-                    }
-                    // display: block;
-                    // width: 36px;
-                    // height: 40px;
-                    // position: absolute;
-                    // top: 0;
-                    // width: 40px;
-                    // right: 0;
-                    // &:after {
-                    //     content:"\2630";
-                    //     color: #999;
-                    //     width: 20px;
-                    //     height: 4px;
-                    //     display: inline-block;
-                    //     position: absolute;
-                    //     right: 0;
-                    //     top: 0;
-                    // }
-                }
-            }
-        }
-    }
+// Navigation Alignment
+.widget .extendednavigation,
+.widget.extendednavigation {
+	 ul li {
+		 float: none;
+		 display: inline-block;
+	 }
+	 ul.align-left {
+		 float: left;
+		 text-align: left;
+	 }
+	 ul.align-right {
+		 float: right;
+		 text-align: right;
+	 }
+	 ul.align-right {
+		 float: none;
+		 text-align: center;
+	 }
 }
