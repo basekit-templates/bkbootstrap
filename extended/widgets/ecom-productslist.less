@@ -60,5 +60,19 @@
         .ecom-productslist-image {
             display: none;
         }
+        .productlist-pagination {
+            margin-left: 3%;
+            @media @mobile {
+                margin-left: 0;
+            }
+            .productlist-pagination-pages {
+                list-style: none;
+                padding: 0;
+                .productlist-pagination-page {
+                    display: inline-block;
+                    padding-right: 20px;
+                }
+            }
+        }
     }
 }
