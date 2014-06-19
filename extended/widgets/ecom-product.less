@@ -25,12 +25,26 @@
             -o-background-size: cover;
             background-size: cover;
             overflow: hidden;
+            @media @mobile {
+               height: auto;
+               background-position: -100% 0;
+            }
+
             img {
                 display: none;
+                @media @mobile {
+                   display: block;
+                   max-width: 100%;
+                   height: auto;
+                   margin: 0 auto;
+                }
             }
         }
         .ecom-product-image-list {
             padding: 0;
+            @media @mobile {
+               text-align: center;
+            }
             li {
                 height: 50px;
                 width: 50px;
@@ -43,6 +57,10 @@
                 -o-background-size: cover;
                 background-size: cover;
                 overflow: hidden;
+                @media @mobile {
+                    float: none;
+                    display: inline-block;
+                }
                 img {
                     display: none;
                 }
