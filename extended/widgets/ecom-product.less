@@ -102,16 +102,3 @@
         }
     } /* end ecom-product */
 } /* end .widget.ecomproduct */
-
-
-// Hides *custom* dropdown arrow in Firefox 30 and above
-@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
-  // All the classes that you've added a custom dropdown arrow to
-  .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
-  select,
-  .svg .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
-  .svg select {
-    // Remove the arrow added to the background
-    background-image: none;
-  }
-}
