@@ -93,7 +93,7 @@
 
 
 //=======================
-// Main BK Boostrap: v2.2
+// Main BK Boostrap: v2.3
 //=======================
 
 // Default styles for widgets
@@ -126,12 +126,14 @@ a {
 	img {
 		border : 0;
 		outline : none;
+		max-width: 100%;
 	}
 }
 
 img {
 	border : 0;
 	border-style: none;
+	max-width: 100%;
 }
 
 * {
@@ -693,6 +695,25 @@ body:after {
             width: 100%;
         }
     }
+}
+
+// Global Button spacing (above and below)
+// =======================================
+.widget {
+	&.button,
+	&.paypalbuynow,
+	&.tweet,
+	&.dropbox,
+	&.clicktocall {
+		margin: 10px 0 15px 0;
+		button,
+		input,
+		a,
+		.widget.button.paypal {
+			margin: 0;
+		}
+	}
+	
 }
 //=====================
 // Click To Call Widget
@@ -1968,6 +1989,17 @@ div.widget.extendednavigation {
     }
 }
 
+//===============
+// Yelp Widget
+//===============
+
+.yelpreview {
+	list-style: none;
+	padding-left: 0;
+	dd {
+		padding-left: 0;
+	}
+}
 
 // Print styling
 @media print,
@@ -2760,6 +2792,11 @@ input:focus:-ms-input-placeholder {
     }
 }
 
+// Open Navigation Class
+.extendednavigation .open {
+    display: block;
+}
+
 //===============
 // Profile Widget
 //===============
@@ -3120,7 +3157,11 @@ footer {
 		}
 	}
 }
-
+.twitter .twitter-content {
+	p a {
+		word-break: break-all;
+	}
+}
 //=================
 // Youtube Widget
 //=================
@@ -3408,19 +3449,23 @@ footer {
             }
         }
         .ecom-product-preview-image-wrap {
-            height: 350px;
             margin-bottom: 1em;
-            background-position: center center;
+            // Hiding the background image
+            background-position: -1000%;
             background-repeat: no-repeat;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
             overflow: hidden;
+
             img {
-                display: none;
+               display: block;
+               max-width: 100%;
+               height: auto;
             }
         }
+
         .ecom-product-image-list {
             padding: 0;
             li {
@@ -3435,6 +3480,7 @@ footer {
                 -o-background-size: cover;
                 background-size: cover;
                 overflow: hidden;
+
                 img {
                     display: none;
                 }
