@@ -45,33 +45,37 @@
 //================================
 // Contact Form Submitting State
 //================================
-.widget.contactform .submitting {
-	overflow: hidden;
-	position: relative;
-	&:before, &:after {
-		content: "";
-		position: absolute;
-	}
-	&:before {
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: fadeout(@color-swatch1, 50%);
-		-webkit-animation: fadein .5s ease-in-out;
-		animation: fadein .5s ease-in-out;
-	}
-	&:after {
-		top: 50%;
-		left: 50%;
-		margin-left: -20px;
-		margin-top: -20px;
-		width: 40px;
-		height: 40px;
-		background-color: @color-swatch5;
-		border-radius: 100%;
-		-webkit-animation: scaleout 1.0s infinite ease-in-out;
-		animation: scaleout 1.0s infinite ease-in-out;
+.widget.contactform,
+.widget.profile,
+.widget.signupform {
+	.submitting {
+		overflow: hidden;
+		position: relative;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: fadeout(@color-swatch1, 50%);
+			-webkit-animation: fadein .5s ease-in-out;
+			animation: fadein .5s ease-in-out;
+		}
+		&:after {
+			top: 50%;
+			left: 50%;
+			margin-left: -20px;
+			margin-top: -20px;
+			width: 40px;
+			height: 40px;
+			background-color: @color-swatch5;
+			border-radius: 100%;
+			-webkit-animation: scaleout 1.0s infinite ease-in-out;
+			animation: scaleout 1.0s infinite ease-in-out;
+		}
 	}
 }
 
