@@ -1282,126 +1282,119 @@ input, textarea {
 // Gallery Widget
 //===============
 
-.widget {
-    &.gallery {
+.widget.gallery {
+    width: 100%;
+    margin-left: -0.5%;
+    position: relative;
+
+    ul {
+        .clearfix;
+        position: relative;
         width: 100%;
-        margin-left: -0.5%;
-		position: relative;
-        ul {
-        	position: relative;
-        	width: 100%;
-            display: block;
-            margin: 0;
-            padding: 0; 
-            list-style: none;
-            *zoom: 1;
+        display: block;
+        margin: 0;
+        padding: 0; 
+        list-style: none;
+        *zoom: 1;
 
-            &:before,
-            &:after {
-                content: "";
-                display: table;
-            }
-            &:after {
-                clear: both;
+        li {
+            float: left;
+            position: relative;
+            width: 33.3%;
+            padding-bottom: 33%;
+
+            @media @tablet {
+                /* Tablet view: 2 tiles */
+                width: 49%;
+                padding-bottom: 50%;
             }
 
-            li {
-                float: left;
-                position: relative;
-                width: 33.3%;
-                padding-bottom: 33%;
-                @media @mobile {
-                    width: 100%;
-                    padding-bottom: 100%;
-                }
+            @media @mobile {
+                width: 100%;
+                padding-bottom: 100%;
+            }
 
+             &.one-to-one {
                 span {
-                    &.inner {
-                        background-position:center center;
-                        background-repeat:no-repeat;
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;
-                        position: absolute;
-                        left: 5px;
-                        right: 5px;
-                        top: 0px;
-                        bottom: 16px;
-                        overflow: hidden;
-                        img {
-                            display: none;
-                        }
-                        .title,
-                        .description {
-                            position: absolute;
-                            bottom: 0px;
-                            left: 0px;
-                            right: 0px;
-                            margin-bottom: -50px;
-                            background: rgba(0, 0, 0, 0.5);
-                            padding: 10px;
-                            text-align: center;
-                            -webkit-transition: all 0.3s ease-out;
-                            -moz-transition: all 0.3s ease-out;
-                            -o-transition: all 0.3s ease-out;
-                            transition: all 0.3s ease-out;
-                        }
-                        .title {
-                            margin-bottom: 0;
-                        }
-                        .description {
-                            display: none;
-                        }
-
-                        a {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                        }
-                    }
-                }
-
-                &.one-to-one {
-                    span {
-                        &:inner {
-                            background-size: 100% 100%;
-                        }
-                    }
-                }
-                &.portrait {
-                    span {
-                        &:inner {
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-                &.landscape {
-                    span {
-                        &:inner {
-                            background-size: auto 100%;
-                        }
+                    &:inner {
+                        background-size: 100% 100%;
                     }
                 }
             }
-        }
 
+            &.portrait {
+                span {
+                    &:inner {
+                        background-size: 100% auto;
+                    }
+                }
+            }
+
+            &.landscape {
+                span {
+                    &:inner {
+                        background-size: auto 100%;
+                    }
+                }
+            }
+
+            .inner {
+                background-position:center center;
+                background-repeat:no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                position: absolute;
+                left: 5px;
+                right: 5px;
+                top: 0px;
+                bottom: 16px;
+                overflow: hidden;
+
+                img {
+                    display: none;
+                }
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }           
+        }
     }
-}
 
-@media @mobile {
-    /* Tablet view: 2 tiles */
-    .widget {
-        &.gallery {
-            ul {
-                li {
-                    width: 49%;
-                    padding-bottom: 50%;
-                }
-            }
+    // .title and .description wrapper
+    .image-data {
+        display: none;
+        padding: 15px;
+        height: 100%;
+    }
+
+    // visible image area :hover
+    .inner:hover {
+        .image-data {
+            display: block;
         }
+    }
+    
+    .title, .description {
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .title {
+        margin-bottom: 0.5em;
+    }
+    .description {
+       
     }
 }
 //=============
@@ -2558,26 +2551,21 @@ input:focus:-ms-input-placeholder {
 //===============
 
 .gallery {
-	ul {
-		li {
-			span {
-				&.inner {
-					background-color: @color-swatch1;
-					.title, .description {
-						background:@color-swatch1;
-						font-family: @font-swatch5-font-family;
-						font-size: @font-swatch5-font-size;
-						font-weight: @font-swatch5-font-weight;
-						line-height: @font-swatch5-line-height;
-						color: @color-swatch1;
-						letter-spacing: @font-swatch5-letter-spacing;
-					}
-				}
-			}
-		}
+	.inner {
+		background-color: @color-swatch1;
+	}
+	.title, .description {
+		font-family: @font-swatch5-font-family;
+		font-size: @font-swatch5-font-size;
+		font-weight: @font-swatch5-font-weight;
+		line-height: @font-swatch5-line-height;
+		color: @color-swatch5;
+		letter-spacing: @font-swatch5-letter-spacing;
+	}
+	.image-data {
+		background: fade(@color-swatch1, 80%);
 	}
 }
-
 //=============
 // Menu Styling
 //=============
