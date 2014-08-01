@@ -3041,31 +3041,28 @@ footer {
 // Social Icons Widget
 //====================
 
-.widget {
-    &.socialicons {
-        margin: 1em 0;
-        .p-font;
-        a {
-            overflow: hidden;
-            text-decoration: none;
-            text-indent: 9999px;
-            white-space: nowrap;
-        }
-        span {
-            a {
-                display: inline-block;
-                margin-right: 6px;
-                margin-bottom: 6px;
-                background-size: 18px;
-                width: 32px;
-                height: 32px;
-                background-color: @font-swatch7-background-color;
-                background-repeat: no-repeat;
-                background-position: center;
-                &:hover {
-                    background-color: @font-swatch7-background-color-hover;
-                }
-            }
+.widget.socialicons {
+    min-height: 32px;
+    margin: 1em 0;
+    .p-font;
+    a {
+        overflow: hidden;
+        text-decoration: none;
+        text-indent: 9999px;
+        white-space: nowrap;
+    }
+    span a {
+        display: inline-block;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        background-size: 18px;
+        width: 32px;
+        height: 32px;
+        background-color: @font-swatch7-background-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
         }
     }
 }
