@@ -2413,7 +2413,7 @@ blockquote {
 .widget.contactform,
 .widget.profile,
 .widget.signupform,
-.ecom-product-add-to-cart-btn {
+.ecom-product-add-to-cart-btn-wrapper {
 	.submitting {
 		overflow: hidden;
 		position: relative;
@@ -2429,6 +2429,7 @@ blockquote {
 			background-color: fadeout(@color-swatch1, 50%);
 			-webkit-animation: fadein .5s ease-in-out;
 			animation: fadein .5s ease-in-out;
+			border-radius: inherit;
 		}
 		&:after {
 			top: 50%;
@@ -3391,6 +3392,7 @@ footer {
             img {
                max-width: 100%;
                height: auto;
+               max-height: 400px;
             }
         }
 
