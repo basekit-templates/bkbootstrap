@@ -157,7 +157,6 @@ body {
 	font: 16px/1.8 sans-serif;
 	font-weight: 400;
 	color: #333;
-	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
 }
 
@@ -362,6 +361,45 @@ dd {
     }
     &:after {
       clear: both;
+    }
+}
+//==============================
+// Cookie warning styles
+//==============================
+.bk-cookie-container {
+    position: fixed;
+    width: 750px;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -375px;
+    text-align: center;
+    border: 1px solid #333;
+    font-family: @font-swatch1-font-family;
+    color: #333;
+    background-color: #FFF;
+    font-weight: 600;
+    z-index: 2147483647;
+    p {
+        padding: 0.8em;
+    }
+    @media @tablet {
+        width: 500px;
+        margin-left: -250px;
+    }
+    @media @mobile {
+        width: 100%;
+        margin: 0px;
+        left: 0px;
+        bottom: 0px;
+        border: none;
+        border-top: 1px solid #333;
+    }
+    .bk-cookie-close-button {
+        position: absolute;
+        color: #333;
+        top: 1px;
+        right: 2px;
+        line-height: 1em;
     }
 }
 //===================
@@ -643,6 +681,11 @@ body:after {
 	background-repeat: no-repeat;
 	width: 100%;
 	img { max-width: 100%; height: auto; }
+}
+
+a.blog-back-home {
+	padding-bottom: 20px;
+	display: block;
 }
 //======================
 // General Button Styles
@@ -2777,7 +2820,6 @@ input:focus:-ms-input-placeholder {
     .extendednavigation {
         ul {
             li {
-                white-space: nowrap;
                 @media @tablet {
                     border-bottom: 1px solid @color-swatch2;
                 }
