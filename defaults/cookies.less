@@ -2,38 +2,53 @@
 // Cookie warning styles
 //==============================
 .bk-cookie-container {
-    position: fixed;
-    width: 750px;
-    left: 50%;
-    bottom: 10px;
-    margin-left: -375px;
-    text-align: center;
+    background-color: rgba(0,0,0, 0.75);
     border: 1px solid #333;
+    color: white;
     font-family: @font-swatch1-font-family;
-    color: #333;
-    background-color: #FFF;
     font-weight: 600;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: fixed;
+    text-align: center;
+    max-width: 860px;
+    width: 95%;
     z-index: 2147483647;
     p {
-        padding: 0.8em;
+        color: white;
+        padding: 0.5em 1em;
+        @media @mobile {
+            padding: 0.5em 1.75em
+        }
+        a {
+            color: #96d3ed;
+        }
     }
-    @media @tablet {
-        width: 500px;
-        margin-left: -250px;
+    p, a {
+        font-size: 15px;
+        line-height: 23px;
     }
     @media @mobile {
-        width: 100%;
-        margin: 0px;
-        left: 0px;
-        bottom: 0px;
         border: none;
         border-top: 1px solid #333;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        text-align: left;
+        width: 100%;
     }
     .bk-cookie-close-button {
-        position: absolute;
-        color: #333;
-        top: 1px;
-        right: 2px;
+        color: rgba(255,255,255, 0.3);
         line-height: 1em;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        &:hover, &:focus {
+            color: white;
+            transition: color, .5s, ease-out;
+            text-decoration: none;
+        }
     }
 }
