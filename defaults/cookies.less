@@ -19,8 +19,11 @@
     p {
         color: white;
         padding: 0.5em 1em;
+        @media @table {
+            padding: 0.5em 2.5em 0.5em 1em;
+        }
         @media @mobile {
-            padding: 0.5em 1.75em
+            padding-right: 3em;
         }
         a {
             color: #96d3ed;
@@ -45,6 +48,15 @@
         position: absolute;
         right: 10px;
         top: 12px;
+        @media @tablet {
+            font-size: 22px;
+            line-height: 60px;
+            top: 0;
+        }
+         @media only screen and (max-width: 422px) {
+            line-height: 84px;
+            right: 15px;
+        }
         &:hover, &:focus {
             color: white;
             transition: color, .5s, ease-out;
