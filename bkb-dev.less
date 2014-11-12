@@ -303,6 +303,9 @@ pre {
 	padding-bottom: 1em;
 	margin: 0;
 	line-height: 1.8em;
+	overflow:auto;
+	border:1px solid @font-swatch5-color;
+	padding: 0.5em;
 }
 
 summary {
@@ -367,39 +370,66 @@ dd {
 // Cookie warning styles
 //==============================
 .bk-cookie-container {
-    position: fixed;
-    width: 750px;
-    left: 50%;
-    bottom: 10px;
-    margin-left: -375px;
-    text-align: center;
+    background-color: rgba(0,0,0, 0.75);
     border: 1px solid #333;
+    color: white;
     font-family: @font-swatch1-font-family;
-    color: #333;
-    background-color: #FFF;
     font-weight: 600;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: fixed;
+    text-align: center;
+    max-width: 860px;
+    width: 95%;
     z-index: 2147483647;
     p {
-        padding: 0.8em;
+        color: white;
+        padding: 0.5em 1em;
+        @media @tablet {
+            padding: 0.5em 2.5em 0.5em 1em;
+        }
+        @media @mobile {
+            padding-right: 3em;
+        }
+        a {
+            color: #96d3ed;
+        }
     }
-    @media @tablet {
-        width: 500px;
-        margin-left: -250px;
+    p, a {
+        font-size: 15px;
+        line-height: 23px;
     }
     @media @mobile {
-        width: 100%;
-        margin: 0px;
-        left: 0px;
-        bottom: 0px;
         border: none;
         border-top: 1px solid #333;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        text-align: left;
+        width: 100%;
     }
     .bk-cookie-close-button {
-        position: absolute;
-        color: #333;
-        top: 1px;
-        right: 2px;
+        color: rgba(255,255,255, 0.3);
         line-height: 1em;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        @media @tablet {
+            font-size: 22px;
+            line-height: 60px;
+            top: 0;
+        }
+         @media only screen and (max-width: 422px) {
+            line-height: 84px;
+            right: 15px;
+        }
+        &:hover, &:focus {
+            color: white;
+            transition: color, .5s, ease-out;
+            text-decoration: none;
+        }
     }
 }
 //===================
@@ -2007,6 +2037,19 @@ div.widget.extendednavigation {
 		padding-left: 0;
 	}
 }
+//====================
+// Facebook Comments Widget
+//====================
+.widget.facebookcomments {
+    .fb-comments,
+    .fb-comments span,
+    .fb-comments.fb_iframe_widget span iframe {
+        width: 100% !important;
+    }
+}
+
+
+
 
 // Print styling
 @media print,
@@ -2090,6 +2133,7 @@ div.widget.extendednavigation {
      background-color: #fff!important;
      background-image: none!important;
 }
+
 
 // Clean styles for fonts and colours
 //============================
@@ -3523,7 +3567,7 @@ footer {
             line-height: 0;
             text-align: center;
             // Hiding the background image
-            background-position: -1000%;
+            background-position: -10000%;
             background-repeat: no-repeat;
             overflow: hidden;
             img {
@@ -3778,19 +3822,37 @@ footer {
 //=================
 
 .widget.fonectacontactform {
-    fieldset {
-        border: none;
-        padding: 0;
-        margin: 0;
-    }
-    .form-group {
-        margin-bottom: 1em;
-    }
-    input[type="email"],
-    input[type="text"],
-    textarea {
-        width: 100%;
-    }
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+	.form-group {
+		margin-bottom: 1em;
+	}
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		width: 100%;
+	}
+}
+
+//=================
+// Fonecta Map
+//=================
+
+.widget.fonectamap
+{
+	min-height:150px;
+	.fonectmap {
+		width: 100%;
+		height:100%;
+		overflow:hidden;
+		position:absolute;
+	}
+	img {
+		max-width: none;
+	}
 }
 
 
