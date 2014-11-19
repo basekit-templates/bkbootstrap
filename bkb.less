@@ -1165,7 +1165,9 @@ a.blog-back-home {
 //======================
 
 .content {
-	// Nothing to add here...
+	.bk-content-text ol {
+		list-style-position: inside;
+	}
 }
 
 //===============
@@ -2982,6 +2984,18 @@ footer {
     }
 }
 
+/* PROFILE ADDRESS */
+
+.bk-profile-address p {
+    &:after {
+        content: ",";
+        margin-left: -0.2em;
+    }
+    &:last-child:after {
+        content:none;
+    }
+}
+
 //=================
 // Responsive Slideshow Widget
 //=================
@@ -3750,7 +3764,7 @@ footer {
         right: 0;
         left: 0;
         top: 0;
-        z-index: 1;
+        z-index: 120;
         background-color: rgba(0,0,0,0.7);
     }
 
