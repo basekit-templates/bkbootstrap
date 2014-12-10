@@ -157,7 +157,6 @@ body {
 	font: 16px/1.8 sans-serif;
 	font-weight: 400;
 	color: #333;
-	text-rendering: optimizelegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -351,6 +350,7 @@ dd {
 	margin: 0;
 	padding-left: .5em;
 }
+
 //==================
 // Clearfix Settings
 //==================
@@ -1261,6 +1261,13 @@ a.blog-back-home {
 .content {
 	.bk-content-text ol {
 		list-style-position: inside;
+	}
+}
+
+.expand {
+	.more, .less {
+		color: @color-swatch3;
+		cursor: pointer;
 	}
 }
 
@@ -2535,7 +2542,7 @@ blockquote {
         display: block;
         a {
             font-family: @font-swatch10-font-family;
-            font-weight: @font-swatch1-font-weight;
+            font-weight: @font-swatch10-font-weight;
             color: @font-swatch10-color;
             line-height: @font-swatch10-line-height;
             letter-spacing: @font-swatch10-letter-spacing;
@@ -3088,7 +3095,6 @@ footer {
 .bk-profile-address p {
     &:after {
         content: ",";
-        margin-left: -0.2em;
     }
     &:last-child:after {
         content:none;
