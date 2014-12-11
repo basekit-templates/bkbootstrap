@@ -50,6 +50,14 @@
                         color: @font-swatch6-color;
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
+
+                        // Allows text wrap for long words without spacing
+                        -ms-word-break: break-all;
+                        word-break: break-all;
+                        word-break: break-word;
+                        -webkit-hyphens: auto;
+                        -moz-hyphens: auto;
+                        hyphens: auto;
                         &:hover {
                             color: @font-swatch6-color-hover;
                         }
