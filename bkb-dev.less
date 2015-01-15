@@ -1654,7 +1654,7 @@ input, textarea {
 //===========================
 
 .widget {
-	.extendednavigation {
+	.extendednavigation, .navigation {
 		li {
 			> .text {
 				padding: 0 20px;
@@ -2023,6 +2023,14 @@ div.widget.extendednavigation {
                 .clearfix;
                 a {
                     text-decoration: none;
+                    // Allows text wrap for long words without spacing
+                    -ms-word-break: break-all;
+                    word-break: break-all;
+                    word-break: break-word;
+                    -webkit-hyphens: auto;
+                    -moz-hyphens: auto;
+                    hyphens: auto;
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -2886,7 +2894,7 @@ input:focus:-ms-input-placeholder {
 //===========================
 
 .widget {
-    .extendednavigation {
+    .extendednavigation, .navigation {
         ul {
             li {
                 @media @tablet {
@@ -2952,7 +2960,7 @@ input:focus:-ms-input-placeholder {
 }
 
 // Open Navigation Class
-.widget .extendednavigation .open {
+.widget .extendednavigation .open, .widget .navigation .open {
     display: block;
 }
 
@@ -3590,6 +3598,18 @@ footer {
     }
 }/* end .widget.ecomcheckout */
 
+//========================
+// Ecommerce Basket Summary
+//========================
+
+button.btn.js-remove:disabled {
+    opacity: 0.3;
+}
+
+button.btn.js-add:disabled {
+    opacity: 0.3;
+}
+
 //=========================
 // Ecommerce Product Widget
 //=========================
@@ -3676,6 +3696,9 @@ footer {
                     color: white;
                     top: 0;
                 }
+            }
+            &:disabled {
+                opacity:0.3;
             }
         }
         .ecom-product-cattag {
