@@ -3523,13 +3523,13 @@ footer {
 // Ecommerce Basket Summary
 //========================
 
-button.btn.js-remove:disabled {
-    opacity: 0.3;
+.basket-summary-quantitybtn {
+    .btn:disabled {
+         opacity: 0.3;
+         cursor: default;
+    }
 }
 
-button.btn.js-add:disabled {
-    opacity: 0.3;
-}
 
 //=========================
 // Ecommerce Product Widget
@@ -3620,6 +3620,7 @@ button.btn.js-add:disabled {
             }
             &:disabled {
                 opacity:0.3;
+                cursor: default;
             }
         }
         .ecom-product-cattag {
