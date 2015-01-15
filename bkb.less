@@ -1686,7 +1686,7 @@ input, textarea {
 
 // Navigation Alignment
 div.widget .extendednavigation,
-div.widget.extendednavigation {
+div.widget .navigation {
 	 ul li {
 		 float: none;
 		 display: inline-block;
@@ -2799,6 +2799,8 @@ input:focus:-ms-input-placeholder {
 // Extended Navigation Styles
 //===========================
 
+// Shares styles with legace 'navigation' widget
+
 .widget {
     .extendednavigation, .navigation {
         ul {
@@ -2868,6 +2870,19 @@ input:focus:-ms-input-placeholder {
 // Open Navigation Class
 .widget .extendednavigation .open, .widget .navigation .open {
     display: block;
+}
+
+//===========================
+// Navigation Styles
+//===========================
+
+.widget {
+    .navigation {
+        .clearfix;
+        li.selected a .text {
+            color: @color-swatch2;
+        }
+    }
 }
 
 //===============

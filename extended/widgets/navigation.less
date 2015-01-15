@@ -2,6 +2,8 @@
 // Extended Navigation Styles
 //===========================
 
+// Shares styles with legace 'navigation' widget
+
 .widget {
     .extendednavigation, .navigation {
         ul {
@@ -71,4 +73,17 @@
 // Open Navigation Class
 .widget .extendednavigation .open, .widget .navigation .open {
     display: block;
+}
+
+//===========================
+// Navigation Styles
+//===========================
+
+.widget {
+    .navigation {
+        .clearfix;
+        li.selected a .text {
+            color: @color-swatch2;
+        }
+    }
 }
