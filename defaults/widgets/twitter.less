@@ -20,7 +20,10 @@
                     word-break: break-word;
                     -webkit-hyphens: auto;
                     -moz-hyphens: auto;
+                    word-wrap: break-word;
                     hyphens: auto;
+                    // Needed for Windows Mobile IE
+    				display: inline-block;
 
                     &:hover {
                         text-decoration: underline;
