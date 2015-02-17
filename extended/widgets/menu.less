@@ -20,6 +20,9 @@
 				page-break-inside: avoid;
 				// Makes page-break-inside work in FF
 				display: table;
+				table-layout: fixed;
+				width: 100%;
+
 			  }
 			  &.odd {
 				-webkit-column-count: 3;
@@ -28,7 +31,7 @@
 				@media @tablet {
 					-webkit-column-count: 1;
 					-moz-column-count: 1;
-					column-count: 1;	
+					column-count: 1;
 				}
 				&.bk1-columns {
 					-webkit-column-count: 1;
@@ -36,7 +39,7 @@
 					column-count: 1;
 				}
 			}
-			@media @tablet { 
+			@media @tablet {
 				column-count: 2;
 				column-gap: 60px;
 				-moz-column-count: 2;
@@ -44,7 +47,7 @@
 				-webkit-column-count: 2;
 				-webkit-column-gap : 60px;
 			}
-			@media @mobile { 
+			@media @mobile {
 				column-count: 1;
 				-moz-column-count: 1;
 				-webkit-column-count: 1;
@@ -60,7 +63,7 @@
 			column-count: 1;
 			-moz-column-count: 1;
 			-webkit-column-count: 1;
-			@media @tablet { 
+			@media @tablet {
 				column-count: 1;
 				-moz-column-count: 1;
 				-webkit-column-count: 1;
