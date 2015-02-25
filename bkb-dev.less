@@ -2029,7 +2029,10 @@ div.widget .navigation {
                     word-break: break-word;
                     -webkit-hyphens: auto;
                     -moz-hyphens: auto;
+                    word-wrap: break-word;
                     hyphens: auto;
+                    // Needed for Windows Mobile IE
+    				display: inline-block;
 
                     &:hover {
                         text-decoration: underline;
@@ -2802,6 +2805,11 @@ input:focus:-ms-input-placeholder {
 				-ms-column-break-inside: avoid;
 				-o-column-break-inside: avoid;
 				page-break-inside: avoid;
+				// Makes page-break-inside work in FF
+				display: table;
+				table-layout: fixed;
+				width: 100%;
+
 			  }
 			  &.odd {
 				-webkit-column-count: 3;
@@ -2810,15 +2818,21 @@ input:focus:-ms-input-placeholder {
 				@media @tablet {
 					-webkit-column-count: 1;
 					-moz-column-count: 1;
-					column-count: 1;	
+					column-count: 1;
 				}
 				&.bk1-columns {
 					-webkit-column-count: 1;
 					-moz-column-count: 1;
 					column-count: 1;
+					max-width: 50%;
+                    margin: 0 auto;
+                    text-align: center;
+                    @media @tablet {
+                        max-width: 100%;
+                    }
 				}
 			}
-			@media @tablet { 
+			@media @tablet {
 				column-count: 2;
 				column-gap: 60px;
 				-moz-column-count: 2;
@@ -2826,7 +2840,7 @@ input:focus:-ms-input-placeholder {
 				-webkit-column-count: 2;
 				-webkit-column-gap : 60px;
 			}
-			@media @mobile { 
+			@media @mobile {
 				column-count: 1;
 				-moz-column-count: 1;
 				-webkit-column-count: 1;
@@ -2842,7 +2856,7 @@ input:focus:-ms-input-placeholder {
 			column-count: 1;
 			-moz-column-count: 1;
 			-webkit-column-count: 1;
-			@media @tablet { 
+			@media @tablet {
 				column-count: 1;
 				-moz-column-count: 1;
 				-webkit-column-count: 1;
@@ -2855,6 +2869,7 @@ input:focus:-ms-input-placeholder {
 		}
 	}
 }
+
 //=============
 // Image Widget
 //=============
@@ -2886,6 +2901,56 @@ input:focus:-ms-input-placeholder {
                 max-width: 100%;
             }
         }
+
+        .image-img {
+            display: inline-block;
+            max-width: 100%;
+        }
+
+
+        // Align Left
+        .widget-align-left {
+            span {
+                &.image-title, &.image-description {
+                    text-align: left;
+                    margin-right: 0;
+                }
+
+                img {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        // Align Right
+        .widget-align-right {
+            span {
+                &.image-title, &.image-description {
+                    text-align: right;
+                    margin-right: 0;
+                }
+
+                img {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        // Align Center
+        .widget-align-center {
+            span {
+                &.image-title, &.image-description {
+                    text-align: center;
+                }
+
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
     }
 }
 
@@ -2904,8 +2969,17 @@ input:focus:-ms-input-placeholder {
                 }
                 &:hover {
                     ul {
+                        min-width: 180px;
+                        max-width: 300px;
                         background-color: @color-swatch1;
+                        @media @tablet {
+                            max-width: 100%;
+                        }
                         li {
+                            .text {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
                             .box-sizing {
                                 a {
                                     color: @color-swatch5;
@@ -2935,7 +3009,7 @@ input:focus:-ms-input-placeholder {
                         border: 4px solid transparent;
                         border-top-color: @font-swatch6-color;
                     }
-                    /* Folder dropdown arrow BG style goes Here */  
+                    /* Folder dropdown arrow BG style goes Here */
                     .text {
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
@@ -2944,13 +3018,6 @@ input:focus:-ms-input-placeholder {
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
 
-                        // Allows text wrap for long words without spacing
-                        -ms-word-break: break-all;
-                        word-break: break-all;
-                        word-break: break-word;
-                        -webkit-hyphens: auto;
-                        -moz-hyphens: auto;
-                        hyphens: auto;
                         &:hover {
                             color: @font-swatch6-color-hover;
                         }
@@ -3927,7 +3994,7 @@ footer {
         right: 0;
         left: 0;
         top: 0;
-        z-index: 120;
+        z-index: 10000;
         background-color: rgba(0,0,0,0.7);
     }
 
@@ -3938,7 +4005,7 @@ footer {
         left: 35px;
         opacity: 1;
         overflow: visible;
-        z-index: 2;
+        z-index: 10002;
     }
 
     .legal-skin {
