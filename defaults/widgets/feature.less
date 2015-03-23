@@ -6,6 +6,11 @@
 	&.feature {
 		.feature-bgimg {
 			height: 500px;
+
+			:after {
+				content: "";
+			}
+
 			@media @mobile {
 				height: 220px;
 			}
@@ -39,7 +44,7 @@
 						&.justifyfull {
 							text-align: justify;
 						}
-						
+
 						/* FONT STYLES */
 						&.justifyitalic {
 							font-style: italic;
