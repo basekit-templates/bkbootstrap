@@ -4,25 +4,25 @@
 
 .widget {
     &.clicktocall {
-        @media @mobile {
+        @media @mobile, only screen and (max-width:700px) and (orientation:landscape) {
             padding: 10px 0;
         }
         a {
             text-decoration: none;
-            @media @mobile {
+            @media @mobile, only screen and (max-width:700px) and (orientation:landscape) {
                 background-position: 10px;
                 background-repeat:no-repeat;
                 padding: 10px 10px 10px 38px;
                 border: 0;
                 text-decoration: none;
-            }     
+            }
             &:hover {
                 cursor: pointer;
-                @media @mobile {
+                @media @mobile, only screen and (max-width:700px) and (orientation:landscape) {
                     background-position: 10px;
                     padding: 10px 10px 10px 38px;
                     cursor: pointer;
-                    text-decoration: none; 
+                    text-decoration: none;
                 }
             }
         }
