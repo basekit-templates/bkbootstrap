@@ -1109,10 +1109,6 @@ hr {
 		.feature-bgimg {
 			height: 500px;
 
-			&:after {
-				content: "";
-			}
-
 			@media @mobile {
 				height: 220px;
 			}
@@ -2171,13 +2167,12 @@ hr {
 
 .widget {
 	&.feature {
-		display: table;
 		position:relative;
 		width:100%;
 		overflow: hidden;
 		height: auto;
 		.feature-bgimg {
-			display: table-row;
+			display: table;
 			width: 100%;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -2220,7 +2215,7 @@ hr {
 			letter-spacing: @font-swatch9-letter-spacing;
 			@media @mobile {
 				font-size: bkscale(@font-swatch9-font-size, 0.7); /* 20px */
-				line-height: bkscale(@font-swatch9-line-height, 0.8); /* 30px */ 
+				line-height: bkscale(@font-swatch9-line-height, 0.8); /* 30px */
 			}
 		}
 
