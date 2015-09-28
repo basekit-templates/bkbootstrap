@@ -1406,7 +1406,7 @@ input, textarea {
 				&.folder {
 					position: relative;
 					margin-right: 10px;
-					/* Folder dropdown arrow BG style goes Here */
+					/* Folder dropdown arrow BG style goes Here */	
 					cursor: pointer;
 					.text {
 						display: block;
@@ -1424,7 +1424,7 @@ input, textarea {
 				@media @tablet {
 					position: absolute;
 					right: 0;
-					top: -43px;
+					top: -43px; 
 					display: inline-block;
 					width: 40px;
 					height: 40px;
@@ -2599,7 +2599,6 @@ input:focus:-ms-input-placeholder {
         }
 
         .image-img {
-            display: inline-block;
             max-width: 100%;
         }
 
@@ -3689,6 +3688,14 @@ footer {
 	input[type="text"],
 	textarea {
 		width: 100%;
+	}
+	input[type=checkbox] {
+		-webkit-appearance: checkbox;
+		-moz-appearance: checkbox;
+		appearance: checkbox;
+		height: auto;
+		vertical-align: text-bottom;
+		margin: 0 .2rem .2rem 0;
 	}
 
     .legal-overlay {
