@@ -151,21 +151,23 @@
         border-color: #ccc;
     }
     button {
-      padding: 8px 14px;
-      margin: 30px 0 0 0;
-      border: 0;
-      background-color: @font-swatch7-background-color;
-      font-family: @font-swatch7-font-family;
-      font-size: @font-swatch7-font-size;
-      font-weight: @font-swatch7-font-weight;
-      line-height: @font-swatch7-line-height;
-      color:@font-swatch7-color;
-      letter-spacing: @font-swatch7-letter-spacing;
-      text-decoration: none;
-      &:hover {
-          background-color: @font-swatch7-background-color-hover;
-          cursor: pointer;
-      }
+        &.btn {
+            padding: 8px 14px;
+            margin: 20px 0 0 0;
+            border: 0;
+            background-color: @font-swatch7-background-color;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            line-height: @font-swatch7-line-height;
+            color:@font-swatch7-color;
+            letter-spacing: @font-swatch7-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+                cursor: pointer;
+            }
+        }
     }
     .overlay {
         background-color: @button-text;
@@ -175,20 +177,21 @@
 
     // Checkbox and radio button
 
+    input[type=radio],
+    input[type=checkbox],
+    .label--radio,
+    .label--checkbox {
+        display: inline;
+    }
+
     input[type="checkbox"],
     input[type="radio"] {
       width: inherit;
-      margin-right: 10px;
-      display: inline-block;
     }
 
-    .label--radio,
-    .label--checkbox,
-    .label--radio + .option-list,
-    .label--checkbox  + .option-list,
-    .option-list--radio > .option-item--radio,
-    .option-list--checkbox > .option-item--checkbox {
-        display: inline-block;
+    li.option-item--radio,
+    li.option-item--checkbox {
+        list-style-type: none;
     }
 }
 
