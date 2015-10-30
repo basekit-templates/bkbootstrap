@@ -164,8 +164,8 @@
 
     // Checkbox and radio button
 
-    input[type=radio],
-    input[type=checkbox],
+    input[type="radio"],
+    input[type="checkbox"],
     .label--radio,
     .label--checkbox {
         display: inline;
@@ -174,11 +174,26 @@
     input[type="checkbox"],
     input[type="radio"] {
       width: inherit;
+      height: inherit;
     }
 
     .option-item--radio,
     .option-item--checkbox {
         list-style-type: none;
+    }
+
+    // Radio button defaults
+    input[type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance:    radio;
+        appearance:         radio;
+    }
+
+    // Checkbox button defaults
+    input[type="checkbox"] {
+        -webkit-appearance: checkbox;
+        -moz-appearance:    checkbox;
+        appearance:         checkbox;
     }
 }
 
