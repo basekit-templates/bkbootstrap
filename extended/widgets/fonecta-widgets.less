@@ -23,7 +23,14 @@
 		height: auto;
 		vertical-align: text-bottom;
 		margin: 0 .2rem .2rem 0;
+        width: auto;
+        box-shadow: none;
+
 	}
+
+    input[type=checkbox] + label {
+        display: inline-block;
+    }
 
     .legal-overlay {
         width: auto;
@@ -99,4 +106,18 @@
 	img {
 		max-width: none;
 	}
+    // Map control buttons
+    input[type="button"] {
+        font-size: 11px;
+        padding: 5px;
+        line-height: 1.2;
+        background: #fff;
+        letter-spacing: 0;
+        color: #666;
+        font-family: sans-serif;
+        border: 1px solid #aaa;
+        text-shadow: none;
+        box-shadow: none;
+        width: auto;
+    }
 }

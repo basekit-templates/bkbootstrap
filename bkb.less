@@ -2435,8 +2435,8 @@ blockquote {
 
     // Checkbox and radio button
 
-    input[type=radio],
-    input[type=checkbox],
+    input[type="radio"],
+    input[type="checkbox"],
     .label--radio,
     .label--checkbox {
         display: inline;
@@ -2445,11 +2445,26 @@ blockquote {
     input[type="checkbox"],
     input[type="radio"] {
       width: inherit;
+      height: inherit;
     }
 
     .option-item--radio,
     .option-item--checkbox {
         list-style-type: none;
+    }
+
+    // Radio button defaults
+    input[type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance:    radio;
+        appearance:         radio;
+    }
+
+    // Checkbox button defaults
+    input[type="checkbox"] {
+        -webkit-appearance: checkbox;
+        -moz-appearance:    checkbox;
+        appearance:         checkbox;
     }
 }
 
@@ -3757,7 +3772,14 @@ footer {
 		height: auto;
 		vertical-align: text-bottom;
 		margin: 0 .2rem .2rem 0;
+        width: auto;
+        box-shadow: none;
+
 	}
+
+    input[type=checkbox] + label {
+        display: inline-block;
+    }
 
     .legal-overlay {
         width: auto;
@@ -3833,6 +3855,20 @@ footer {
 	img {
 		max-width: none;
 	}
+    // Map control buttons
+    input[type="button"] {
+        font-size: 11px;
+        padding: 5px;
+        line-height: 1.2;
+        background: #fff;
+        letter-spacing: 0;
+        color: #666;
+        font-family: sans-serif;
+        border: 1px solid #aaa;
+        text-shadow: none;
+        box-shadow: none;
+        width: auto;
+    }
 }
 
 .linkedincompanyprofile,
