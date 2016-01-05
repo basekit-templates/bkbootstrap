@@ -1041,6 +1041,13 @@ a.blog-back-home {
 //======================
 
 .content {
+    -ms-word-break: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+
 	.bk-content-text ol {
 		list-style-position: inside;
 	}
@@ -2352,6 +2359,14 @@ blockquote {
             line-height: @font-swatch10-line-height;
             letter-spacing: @font-swatch10-letter-spacing;
             font-size: @font-swatch10-font-size;
+
+            -ms-word-break: break-word;
+            word-break: break-word;
+            word-wrap: break-word;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            hyphens: none;
+
             &:hover {
                 cursor: pointer;
                 text-decoration: none;
@@ -2363,6 +2378,7 @@ blockquote {
     }
 
 }
+
 //================================
 // Contact And Signup Form Widgets
 //================================
