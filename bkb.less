@@ -630,7 +630,7 @@ a.blog-back-home {
 // General Button Styles
 //======================
 
-.tweet a, .dropbox button, .paypalbuynow input[type=submit].widget, .btn {	
+.tweet a, .dropbox button, .filedownload button, .paypalbuynow input[type=submit].widget, .btn {	
 	background-repeat: no-repeat;
 	background-position: 2px 1px;
 	background-size: 15px;
@@ -686,6 +686,7 @@ a.blog-back-home {
 	&.paypalbuynow,
 	&.tweet,
 	&.dropbox,
+	&.filedownload,
 	&.clicktocall {
 		margin: 10px 0 15px 0;
 		button,
@@ -1929,7 +1930,7 @@ div.widget .navigation {
 // General Button Styles
 //======================
 
-.tweet a, .dropbox button, .paypalbuynow input[type=submit].widget, .btn {	
+.tweet a, .dropbox button, .filedownload button, .paypalbuynow input[type=submit].widget, .btn {	
 	// Really need a font icon set for this kind of thing, they should be picking icons for the buttons not images.
 	// Icons will be better for high resolution displays and can be coloured in the css.
 	background-color: @button-background;
@@ -2024,6 +2025,39 @@ button.btn {
             background-repeat: no-repeat;
             background-position: 10px;
             background-size: 22px;
+            background-color: @font-swatch7-background-color;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            line-height: @font-swatch7-line-height;
+            color: @font-swatch7-color;
+            letter-spacing: @font-swatch7-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+                cursor: pointer;
+            }
+        }
+
+        .file-name {
+            .p-font;
+            margin-left: 5px;
+        }
+
+    }
+}
+
+.widget {
+    &.filedownload { 
+        .clearfix;
+        button {
+            padding: 10px 10px 10px 38px;
+            margin: 1em 0;
+            border: none;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfgCgUPBh938LT/AAAA7ElEQVQ4y92RMUpDQRRFz4QEhYAQbVxB0sYViLiR7MBeC7+NWKfJElK6ASUEWwm4Ayu1UhQE+RKP1ZfwM/Mntad6zLuHeW8mEMEdWsBP+GATnFgxWe+2IsZBpGoUGvkPQrsq7HHJPgD9v27fawBeOA1vNdOhTQwjl1kk40VivoSSiieUpnhEycVrSiTedosjtldO7kIhnAMXobDH4UrvixnOazM/uAeOHIG7LmrdOZFXWTgAcLAWV4NGF7kFjuMr5nj1zGf13ivVvHADTtUTO74rllnlUdXSJ7XEscusUrF0HMAunQ3+E+A7fP4CvASp3Tm+T64AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMTAtMDVUMTU6MDY6MzErMDI6MDAYeQXhAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTEwLTA1VDE1OjA2OjMxKzAyOjAwaSS9XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=');
+            background-repeat: no-repeat;
+            background-position: 13px;
+            background-size: 18px;
             background-color: @font-swatch7-background-color;
             font-family: @font-swatch7-font-family;
             font-size: @font-swatch7-font-size;
