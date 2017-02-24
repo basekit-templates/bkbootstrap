@@ -1562,9 +1562,17 @@ div.widget .navigation {
         }
         .slideshow-image-list {
             min-height: 450px;
+            position: relative;
                 @media @tablet {
                     min-height: 350px;
                 }
+        }
+        .slideshow-image-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
         .title,
         .description {
@@ -1602,7 +1610,7 @@ div.widget .navigation {
                 background: #ddd;
                 font-size: 0;
                 text-indent: -99999px;
-                
+
                 position: absolute;
 				cursor: pointer;
 				z-index: 12;
@@ -1614,7 +1622,7 @@ div.widget .navigation {
             &:hover {
                 .btn-play {
                     &.pause {
-                    	
+
                     }
                 }
             }
@@ -1623,7 +1631,7 @@ div.widget .navigation {
             }
         }
         .slideshow-widget-controls {
-            margin-top: 10px;  
+            margin-top: 10px;
             .dot {
                 border:none;
                 background: #ddd;
@@ -1634,7 +1642,7 @@ div.widget .navigation {
                 	background: #000;
                 	border: 2px solid #ddd;
                 }
-            }   
+            }
         }
     }
 }
