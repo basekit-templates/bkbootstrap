@@ -11,6 +11,33 @@ input, textarea {
 	font-weight: normal;
 }
 
+// Placeholder Text
+input,
+input:focus,
+textarea,
+textarea:focus {
+
+
+    &::-webkit-input-placeholder {
+      color: @color-swatch5;
+    }
+
+
+    &::-moz-placeholder {
+      color: @color-swatch5;
+    }
+
+
+    &:-ms-input-placeholder {
+      color: @color-swatch5;
+    }
+
+
+    &::placeholder {
+      color: @color-swatch5;
+    }
+}
+
 
 //==============
 // Singup Widget
