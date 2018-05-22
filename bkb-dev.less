@@ -96,6 +96,116 @@
 // Main BK Boostrap: v2.3
 //=======================
 
+// -----------------------------
+// CORE: Mixns
+// -----------------------------
+
+
+// Flexbox Mixins
+// --------------
+
+// Flexbox Display
+.flex-display(@display: flex) {
+    display: ~"-webkit-box";
+    display: ~"-webkit-@{display}";
+    display: ~"-moz-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}";    // IE11
+    display: @display;
+}
+
+// Flex
+.flex(@columns: initial) {
+  -webkit-flex: @columns;
+     -moz-flex: @columns;
+      -ms-flex: @columns;
+          flex: @columns;
+}
+
+// Flex Basis
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+      -ms-flex-basis: @width;
+          flex-basis: @width;
+          max-width: @width;
+}
+
+// Flex Wrap
+.flex-wrap(@wrap: wrap) {
+    -webkit-flex-wrap: @wrap;
+    -moz-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+
+// Flex Direction
+.flex-direction(@direction: row) {
+      -webkit-box-orient: @direction;
+   -webkit-box-direction: @direction;
+  -webkit-flex-direction: @direction;
+     -moz-flex-direction: @direction;
+      -ms-flex-direction: @direction;
+          flex-direction: @direction;
+}
+
+// Flex Source Order
+.flex-order(@order: 0) {
+  -webkit-box-ordinal-group: @order;
+              -webkit-order: @order;
+                 -moz-order: @order;
+                  -ms-order: @order;
+             -ms-flex-order: @order;
+                      order: @order;
+}
+
+// Flex Grow
+.flex-grow(@grow: 0) {
+  -webkit-flex-grow: @grow;
+     -moz-flex-grow: @grow;
+      -ms-flex-grow: @grow;
+  -ms-flex-positive: @grow;
+          flex-grow: @grow;
+}
+
+// Justify Content
+.justify-content(@justify: flex-start) {
+          webkit-box-pack: @justify;
+  -webkit-justify-content: @justify;
+     -moz-justify-content: @justify;
+      -ms-justify-content: @justify;
+            -ms-flex-pack: @justify;
+          justify-content: @justify;
+}
+
+// Align Content
+.align-content(@align: stretch) {
+  -webkit-align-content: @align;
+     -moz-align-content: @align;
+      -ms-align-content: @align;
+     -ms-flex-line-pack: @align;
+          align-content: @align;
+}
+
+// Align Self
+.align-self(@align: center) {
+  -webkit-align-self: @align;
+     -moz-align-self: @align;
+      -ms-align-self: @align;
+      -ms-flex-item-align: @align;
+      -ms-flex-align: @align;
+          align-self: @align;
+}
+
+// Align Items
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+     -moz-align-items: @align;
+      -ms-align-items: @align;
+       -ms-flex-align: @align;
+          align-items: @align;
+}
+
+
 // Default styles for widgets
 //=======================================
 // Default styles for general and widgets
@@ -444,6 +554,59 @@ dd {
             color: white;
             text-decoration: none;
         }
+    }
+}
+
+
+//========================
+// GDPR Forms
+//========================
+
+.widget.advancedcontactform .advancedcontactform__form-group--terms,
+.widget.contactform .contactform__form-group--terms,
+.widget.signupform .signupform__form-group--terms {
+
+    label {
+        color: @font-swatch5-color;
+        .flex-display;
+        .align-items(center);
+        font-family: @font-swatch5-font-family;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 15px 0;
+        padding-left: 22px;
+        position: relative;
+        height: auto;
+        text-align: left;
+        text-transform: none;
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        height: auto;
+        width: auto;
+    }
+}
+
+
+//========================
+// CORE: GDPR Footer Link
+//========================
+
+.gdpr-footer {
+    text-align: center;
+
+    &__link {
+        color: @font-swatch5-color;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1;
+        padding: 15px;
+        text-decoration: none;
     }
 }
 
@@ -1265,7 +1428,7 @@ textarea:focus {
 
 
 //==============
-// Singup Widget
+// Signup Widget
 //==============
 
 .signupform {
@@ -1314,6 +1477,7 @@ textarea:focus {
         }
     }
 }
+
 
 //================
 // Form Validation
