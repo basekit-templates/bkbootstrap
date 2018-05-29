@@ -19,5 +19,6 @@
   "empty-rules": false,
   "zero-units": false,
   "box-model": false,
-  "text-indent": false
+  "text-indent": false,
+  "unqualified-attributes": false
 }
