@@ -559,11 +559,13 @@ dd {
 // GDPR Forms
 //========================
 
-.widget.advancedcontactform .advancedcontactform__form-group--terms,
-.widget.contactform .contactform__form-group--terms,
-.widget.signupform .signupform__form-group--terms {
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
     .flex-display;
+    .flex-wrap(nowrap);
     .align-items(center);
+    .justify-content(flex-start);
     position: relative;
 
 
@@ -609,7 +611,6 @@ dd {
             &:after {
                 margin: auto 0;
                 position: absolute;
-                top: 0;
                 bottom: 0;
             }
 
@@ -621,8 +622,9 @@ dd {
                 content: "";
                 left: 0;
                 margin: auto 0;
-                max-height: 36px;
+                max-height: 35px;
                 min-width: 35px;
+                top: 0;
             }
 
             &:after {
@@ -636,6 +638,7 @@ dd {
                 height: 8px;
                 left: 9px;
                 opacity: 0;
+                top: -2px;
                 width: 18px;
                 zoom: 1;
                 transform: rotate(-45deg);
@@ -663,6 +666,11 @@ dd {
             opacity: 1;
         }
     }
+}
+
+
+.widget.signupform .signupform__form-group--terms {
+    margin-top: 12px;
 }
 
 
