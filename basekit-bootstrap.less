@@ -468,30 +468,106 @@ dd {
 .widget.advancedcontactform .advancedcontactform__form-group--terms,
 .widget.contactform .contactform__form-group--terms,
 .widget.signupform .signupform__form-group--terms {
+    .flex-display;
+    .align-items(center);
+    position: relative;
 
-    label {
+
+    label,
+    .form__link {
         color: @font-swatch5-color;
-        .flex-display;
-        .align-items(center);
         font-family: @font-swatch5-font-family;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.4;
-        margin: 15px 0;
-        padding-left: 22px;
-        position: relative;
-        height: auto;
+         margin-bottom: 0;
         text-align: left;
         text-transform: none;
-        width: 100%;
     }
 
+
+    .form__link {
+        text-decoration: underline;
+    }
+
+
     input[type="checkbox"] {
-        margin: 0;
-        position: absolute;
-        left: 0;
+        margin-right: 12px;
         height: auto;
         width: auto;
+    }
+
+
+    // Larger clickable area for touch devices
+    @media only screen and (max-width: 1024px) {
+
+        label {
+            .flex-display;
+            .align-items(center);
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+
+            &:before,
+            &:after {
+                margin: auto 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+
+            &:before {
+                background: #fff;
+                border: 1px solid;
+                border-color: rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                content: "";
+                left: 0;
+                margin: auto 0;
+                max-height: 36px;
+                min-width: 35px;
+            }
+
+            &:after {
+                background: transparent;
+                border: solid;
+                border-color: @font-swatch5-color;
+                border-top-color: transparent;
+                border-width: 0 0 2px 2px;
+                content: "";
+                filter: alpha(opacity=0);
+                height: 8px;
+                left: 9px;
+                opacity: 0;
+                width: 18px;
+                zoom: 1;
+                transform: rotate(-45deg);
+            }
+        }
+
+
+        input[type="checkbox"] {
+            cursor: pointer;
+            flex-shrink: 0;
+            filter: alpha(opacity=0);
+            margin: 0 10px 0 0;
+            min-height: 35px;
+            min-width: 35px;
+            height: 35px !important;
+            width: 35px !important;
+            opacity: 0;
+            zoom: 1;
+            z-index: 1;
+        }
+
+
+        input[type="checkbox"]:checked + label:after {
+            filter: alpha(opacity=1);
+            opacity: 1;
+        }
     }
 }
 
